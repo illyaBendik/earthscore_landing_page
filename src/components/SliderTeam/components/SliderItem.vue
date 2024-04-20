@@ -20,7 +20,7 @@
         </p>
       </div>
     </div>
-    <button @click="$emit('click-prev')" :disabled="isLast">
+    <button @click="$emit('click-next')" :disabled="isLast">
       <RightIcon
         @click="$emit('click-next')"
         class="text-5xl ml-6"

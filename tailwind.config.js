@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        museoSansRounded: ['MuseoSansRounded', 'sans-serif']
+      },
       colors: {
         primary: {
           A50: '#e6f2ff',
