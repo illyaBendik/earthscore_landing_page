@@ -1,28 +1,60 @@
 <template>
-  <SliderItem
-    :name="currentItem.name"
-    :position="currentItem.position"
-    :deskPosition="currentItem.deskPosition"
-    :img="currentItem.img"
-    :text="currentItem.text"
-    :isFirst="activeIndex === 0"
-    :isLast="activeIndex === users.length - 1"
-    @click-next="next"
-    @click-prev="prev"
-  ></SliderItem>
-  <ListItems :active-index="activeIndex" :users="users" @on-click-item="setActiveIndex"></ListItems>
+  <swiper id="slider-team" @init="init" :pagination="false" :modules="modules">
+    <swiper-slide v-for="(user, i) in users" :key="i">
+      <SliderItem
+        :isFirst="activeIndex === 0"
+        :isLast="activeIndex === users.length - 1"
+        v-bind="user"
+        @click-next="next()"
+        @click-prev="prev()"
+      ></SliderItem>
+    </swiper-slide>
+  </swiper>
+  <ListItems :active-index="activeIndex" :users="users" @on-click-item="onClikcBtn"></ListItems>
 </template>
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-
+import { Pagination } from 'swiper/modules'
+import { ref } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import SliderItem from './components/SliderItem.vue'
 import ImgUser1 from '@/assets/img/user-1.png'
 import ImgUser2 from '@/assets/img/user-2.png'
 import ImgUser3 from '@/assets/img/user-3.png'
 import ImgUser4 from '@/assets/img/user-4.png'
 import ImgUser5 from '@/assets/img/user-5.png'
-
-import SliderItem from './components/SliderItem.vue'
 import ListItems from './components/ListItems.vue'
+
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
+const modules = [Pagination]
+
+const swiperInstance = ref()
+const activeIndex = ref(0)
+
+const init = (e: any) => {
+  swiperInstance.value = e
+}
+
+const onClikcBtn = (index: number) => {
+  activeIndex.value = index
+  swiperInstance.value.slideTo(index)
+}
+
+const next = () => {
+  if (activeIndex.value !== users.length - 1) {
+    activeIndex.value = activeIndex.value + 1
+    swiperInstance.value.slideTo(activeIndex.value)
+  }
+}
+
+const prev = () => {
+  if (activeIndex.value !== 0) {
+    activeIndex.value = activeIndex.value - 1
+    swiperInstance.value.slideTo(activeIndex.value)
+  }
+}
 
 const users = [
   {
@@ -49,36 +81,16 @@ const users = [
   {
     name: 'Igor Shtelmakh',
     position: 'Technology and AI expert',
-    deskpostion: 'Technology & Customer Centric Solutions Team',
+    deskPosition: 'Technology & Customer Centric Solutions Team',
     img: ImgUser4,
     text: `Igor Shtelmakh, a seasoned technology leader from Vinnytsia, Ukraine, holds a PhD in Computer Science and a Master's degree in Automatics and Computer Control Systems from Vinnitsia National Technical University. As the Chief Technology Officer at Xcubator GmbH and a Senior Software Developer at Secjur since August 2021, Igor leads technological innovations and software development projects. Previously, he served as Chief Data Officer at Widr Pay in Paris, enhancing data governance and business intelligence. His expertise spans software development, data science, and AI, contributing to his significant role in advancing technology solutions in legal and business environments.`
   },
   {
     name: 'Claus Adams',
     position: 'Senior Advisor',
-    deskpostion: 'Growth, Clients & Marketing Specialists',
+    deskPosition: 'Growth, Clients & Marketing Specialists',
     img: ImgUser5,
     text: `Claus Adams is a seasoned professional with +20 years in the advertising & marketing industry. His career has been a rewarding journey of learning and leading, from top agencies like Geometry Global, Cheil, VMLY&R, and Ogilvy to my current roles as a founder, investor, advisor and partner in various fields, including Sustainability, Retail Media, Advertising, and DTC/Social Commerce. His experience spans diverse sectors, where he has embraced the complexities of consumer behaviour, commerce, and technology. In his leadership and advisory positions, he is passionate about driving growth, fostering innovation and cooperation in these areas.`
   }
 ]
-
-const activeIndex = ref(0)
-
-const currentItem = computed(() => users[activeIndex.value])
-
-const next = () => {
-  if (activeIndex.value !== users.length - 1) {
-    activeIndex.value = activeIndex.value + 1
-  }
-}
-
-const prev = () => {
-  if (activeIndex.value !== 0) {
-    activeIndex.value = activeIndex.value - 1
-  }
-}
-
-const setActiveIndex = (i: number) => {
-  activeIndex.value = i
-}
 </script>

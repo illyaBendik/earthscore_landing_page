@@ -1,6 +1,8 @@
 <template>
-  <div class="bg-[#E6F2FF80] w-full px-10 md:px-40 md:py-10 mt-20 flex justify-center items-center">
-    <div class="max-w-7xl gap-5 flex overflow-x-auto md:overflow-y-hidden items-center">
+  <div
+    class="bg-[#E6F2FF80] w-full px-[10px] lg:px-40 py-5 lg:py-10 flex justify-center items-center"
+  >
+    <div class="gap-5 flex overflow-x-auto lg:overflow-y-hidden items-center scrollbar pb-2">
       <div
         class="flex flex-col items-center justify-start min-w-[200px]"
         v-for="(user, i) in users"

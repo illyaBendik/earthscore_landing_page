@@ -1,36 +1,36 @@
 @font-face {
-  font-family: 'MuseoSansRounded';
-  src: url('assets/fonts/MuseoSansRounded/otf/MuseoSansRounded-100.otf') format('otf');
+  font-family: 'museo-sans-rounded';
+  src: url('./fonts/MuseoSansRounded/otf/MuseoSansRounded-100.otf') format('otf');
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
-  font-family: 'MuseoSansRounded';
-  src: url('assets/fonts/MuseoSansRounded/otf/MuseoSansRounded-300.otf') format('otf');
+  font-family: 'museo-sans-rounded';
+  src: url('./fonts/MuseoSansRounded/otf/MuseoSansRounded-300.otf') format('otf');
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
-  font-family: 'MuseoSansRounded';
-  src: url('assets/fonts/MuseoSansRounded/otf/MuseoSansRounded-500.otf') format('otf');
+  font-family: 'museo-sans-rounded';
+  src: url('./fonts/MuseoSansRounded/otf/MuseoSansRounded-500.otf') format('otf');
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'MuseoSansRounded';
-  src: url('assets/fonts/MuseoSansRounded/otf/MuseoSansRounded-700.otf') format('otf');
+  font-family: 'museo-sans-rounded';
+  src: url('./fonts/MuseoSansRounded/otf/MuseoSansRounded-700.otf') format('otf');
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
-  font-family: 'MuseoSansRounded';
-  src: url('assets/fonts/MuseoSansRounded/otf/MuseoSansRounded-900.otf') format('otf');
+  font-family: 'museo-sans-rounded';
+  src: url('./fonts/MuseoSansRounded/otf/MuseoSansRounded-900.otf') format('otf');
   font-weight: 900;
   font-display: swap;
 }
 @font-face {
-  font-family: 'MuseoSansRounded';
-  src: url('assets/fonts/MuseoSansRounded/otf/MuseoSansRounded-1000.otf') format('otf');
+  font-family: 'museo-sans-rounded';
+  src: url('./fonts/MuseoSansRounded/otf/MuseoSansRounded-1000.otf') format('otf');
   font-weight: 1000;
   font-display: swap;
 }
