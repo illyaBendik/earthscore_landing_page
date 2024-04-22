@@ -50,29 +50,37 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
-import SliderImg1 from '@/assets/img/slider-1.png'
-import SliderImg2 from '@/assets/img/slider-2.png'
+import SliderImg1 from '@/assets/img/B2C_1.png'
+import SliderImg2 from '@/assets/img/B2C_2.png'
+import SliderImg3 from '@/assets/img/B2C_3.png'
+import SliderImg4 from '@/assets/img/B2C_4.png'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 
 const list = [
   {
     title: 'EarthScore for Everyone',
-    subtitle: 'Make The Best Decisions For Your Sustainable Consumption',
-    text: 'EarthScore app helps you make sustainable consumer decisions conveniently. It analyzes products and services across the board for their sustainability. Our goal is to give you full transparency about the environmental impact of the products and services of your choice. Become a part of our community and help to make our planet a better place for us and future generations! ',
+    subtitle: 'EarthScore App',
+    text: `Elevate your shopping experience with our EarthScore Consumer App! Say goodbye to doubts and hello to confidence! With our app, you'll shop smarter and more sustainable, with profound knowledge at your fingertips. Our EarthScore scoring system ensures you make eco-friendly choices, avoiding greenwashing and reducing rebound effects. But that's not all! Share your lifestyle successes and track your progress seamlessly, just like your favorite fitness apps. Plus, your feedback directly shapes our features, making your experience even better. Shop with certainty, shop with our app.`,
     img: SliderImg1
   },
   {
     title: 'EarthScore for Consumers',
-    subtitle: 'Find the Right Products',
-    text: 'Do you know how sustainable the products you consume really are? Scan the barcode of your products & learn about their environmental impact. Find suggestions for alternative products easily and improve your overall footprint on our planet with every step you take! ',
+    subtitle: 'EarthScore for You – Confident, Convenient, Sustainable!',
+    text: 'Ever wondered about the true sustainability of your purchases? With our app, scan any barcode and discover the environmental impact of your products instantly. From groceries to gadgets, empower yourself to make eco-conscious choices. Easily find alternatives to reduce your footprint and improve your shopping habits. Take control of your impact on the planet—one scan at a time. Start scanning, start changing, start making a difference.',
     img: SliderImg2
   },
   {
     title: 'EarthScore for Consumers',
-    subtitle: 'The EarthScore ',
-    text: `The foundation for our EarthScore are our ES SubScores:Climate,Packaging,Water,Product Quality and Social.
-Understand how every single dimension of your products & services are rated and how the EarthScore is evaluated. Our SubScores also give you the opportunity to put an emphasis on your personal focus. Do you prefer local products? Is your focus on social & human rights aspects, or are you trying to avoid harmful packaging? The SubScores deliver information on several drill down levels.`,
-    img: SliderImg1
+    subtitle: 'More Advantages for You',
+    text: `Explore the depths of sustainability with our ES SubScores— Packaging, Environment, Product Quality, Social, and Health. Understand the overall sustainability of products and services of your choice, and how they contribute to your personal EarthScore.
+Tailor your focus with our EarthScore SubScores, whether it's prioritizing local products, focusing on health aspects, or avoiding harmful packaging. Dive deep into each dimension, uncovering layers of insight to shape your choices.`,
+    img: SliderImg3
+  },
+  {
+    title: 'EarthScore for Consumers',
+    subtitle: 'The Direct Feedback Loop Function',
+    text: `What do you think about the products you buy? What would you like to improve in terms of sustainability? Does the production process use too much water? Do you like the design of the "new packaging"? Tell the manufacturers directly what you think about their products and how they can be improved.`,
+    img: SliderImg4
   }
 ]
 

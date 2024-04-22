@@ -104,7 +104,7 @@
 </template>
 <script setup lang="ts">
 import { toBlock } from '@/utils/toBlock'
-import TestImg1 from '@/assets/img/test-1.png'
+import TestImg1 from '@/assets/img/full-screen-1.png'
 import BgImg2 from '@/assets/img/full-screen-2.jpg'
 import BgImg3 from '@/assets/img/full-screen-3.jpg'
 import DownIcon from '@/components/icons/DownIcon.vue'
