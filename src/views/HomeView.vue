@@ -1,7 +1,7 @@
 <template>
   <!-- FIRST BLOCK -->
   <div
-    :style="{ 'background-image': 'url(' + TestImg1 + ')' }"
+    :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
     class="w-full min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
   >
     <h1 class="text-[32px] md:text-6xl font-light text-center leading-[50px] md:leading-[80px]">
@@ -104,7 +104,7 @@
 </template>
 <script setup lang="ts">
 import { toBlock } from '@/utils/toBlock'
-import TestImg1 from '@/assets/img/full-screen-1.png'
+import BgImg1 from '@/assets/img/full-screen-1.png'
 import BgImg2 from '@/assets/img/full-screen-2.jpg'
 import BgImg3 from '@/assets/img/full-screen-3.jpg'
 import DownIcon from '@/components/icons/DownIcon.vue'

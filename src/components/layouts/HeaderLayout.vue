@@ -5,9 +5,11 @@
     :class="{ 'bg-white': isScrolled }"
   >
     <div>
-      <img class="w-10 h-10" :src="ImgLogo" alt="Logo" />
+      <RouterLink :to="{ name: 'home' }">
+        <img class="w-10 h-10" :src="ImgLogo" alt="Logo" />
+      </RouterLink>
     </div>
-    <div class="flex items-center gap-3">
+    <div v-if="useRoute().name === 'home'" class="flex items-center gap-3">
       <button
         :class="{
           'border-none text-white bg-primary-A300': isScrolled,
@@ -25,6 +27,7 @@
 </template>
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
 import { toBlock } from '@/utils/toBlock'
 import ImgLogo from '@/assets/img/logo.svg'
 
