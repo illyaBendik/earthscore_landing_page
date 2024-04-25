@@ -1,60 +1,50 @@
 <template>
-  <swiper id="slider-team" @init="init" :pagination="false" :modules="modules">
-    <swiper-slide v-for="(user, i) in users" :key="i">
-      <SliderItem
-        :isFirst="activeIndex === 0"
-        :isLast="activeIndex === users.length - 1"
-        v-bind="user"
-        @click-next="next()"
-        @click-prev="prev()"
-      ></SliderItem>
-    </swiper-slide>
-  </swiper>
-  <ListItems :active-index="activeIndex" :users="users" @on-click-item="onClikcBtn"></ListItems>
+  <div id="slider-team">
+    <swiper :allow-touch-move="false" :slides-per-view="1" @init="onSwiperMain">
+      <swiper-slide v-for="(user, i) in users" :key="i">
+        <SliderItem
+          :isFirst="swiperInstanceMain ? swiperInstanceMain.activeIndex === 0 : false"
+          :isLast="swiperInstanceMain ? swiperInstanceMain.activeIndex === users.length - 1 : false"
+          v-bind="user"
+          @click-next="next()"
+          @click-prev="prev()"
+        ></SliderItem>
+      </swiper-slide>
+    </swiper>
+    <div class="bg-[#E6F2FF80] w-full py-5 lg:py-10 mt-3 lg:mt-10">
+      <swiper
+        id="slider-team-pagination"
+        :slides-per-view="slidesPerView"
+        @init="onSwiperPagination"
+      >
+        <swiper-slide v-for="(user, i) in users" @click="onClikcBtn(i)" :key="i">
+          <div class="flex flex-col items-center justify-start min-w-[200px]">
+            <div
+              :class="{
+                'border-2 border-black-N700':
+                  swiperInstancePagination && swiperInstancePagination.activeIndex === i
+              }"
+              class="h-[84px] w-[84px] bg-center bg-cover rounded-full cursor-pointer hover:border-2 hover:border-black-N700"
+              :style="{ 'background-image': 'url(' + user.img + ')' }"
+            ></div>
+            <p class="text-base text-center mt-1.5 mb-0.5">{{ user.name }}</p>
+            <p class="text-xs text-center">{{ user.position }}</p>
+          </div>
+        </swiper-slide>
+      </swiper>
+    </div>
+  </div>
 </template>
 <script setup lang="ts">
-import { Pagination } from 'swiper/modules'
-import { ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+
 import SliderItem from './components/SliderItem.vue'
 import ImgUser1 from '@/assets/img/user-1.png'
 import ImgUser2 from '@/assets/img/user-2.png'
 import ImgUser3 from '@/assets/img/user-3.png'
 import ImgUser4 from '@/assets/img/user-4.png'
 import ImgUser5 from '@/assets/img/user-5.png'
-import ListItems from './components/ListItems.vue'
-
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-
-const modules = [Pagination]
-
-const swiperInstance = ref()
-const activeIndex = ref(0)
-
-const init = (e: any) => {
-  swiperInstance.value = e
-}
-
-const onClikcBtn = (index: number) => {
-  activeIndex.value = index
-  swiperInstance.value.slideTo(index)
-}
-
-const next = () => {
-  if (activeIndex.value !== users.length - 1) {
-    activeIndex.value = activeIndex.value + 1
-    swiperInstance.value.slideTo(activeIndex.value)
-  }
-}
-
-const prev = () => {
-  if (activeIndex.value !== 0) {
-    activeIndex.value = activeIndex.value - 1
-    swiperInstance.value.slideTo(activeIndex.value)
-  }
-}
 
 const users = [
   {
@@ -93,4 +83,86 @@ const users = [
     text: `Claus Adams is a seasoned professional with +20 years in the advertising & marketing industry. His career has been a rewarding journey of learning and leading, from top agencies like Geometry Global, Cheil, VMLY&R, and Ogilvy to my current roles as a founder, investor, advisor and partner in various fields, including Sustainability, Retail Media, Advertising, and DTC/Social Commerce. His experience spans diverse sectors, where he has embraced the complexities of consumer behaviour, commerce, and technology. In his leadership and advisory positions, he is passionate about driving growth, fostering innovation and cooperation in these areas.`
   }
 ]
+
+const swiperInstanceMain = ref()
+const swiperInstancePagination = ref()
+const screenWidth = ref(window.innerWidth)
+
+const onSwiperMain = (swiper: any) => {
+  swiperInstanceMain.value = swiper
+}
+
+const onSwiperPagination = (swiper: any) => {
+  swiperInstancePagination.value = swiper
+}
+
+const onClikcBtn = (index: number) => {
+  swiperInstanceMain.value.activeIndex = index
+  swiperInstanceMain.value.slideTo(index)
+
+  swiperInstancePagination.value.activeIndex = index
+  swiperInstancePagination.value.slideTo(index)
+}
+
+const next = () => {
+  if (swiperInstanceMain.value.activeIndex !== users.length - 1) {
+    const index = swiperInstanceMain.value.activeIndex + 1
+
+    swiperInstanceMain.value.activeIndex = index
+    swiperInstanceMain.value.slideTo(index)
+
+    swiperInstancePagination.value.slideTo(index)
+    swiperInstancePagination.value.activeIndex = index
+  }
+}
+
+const prev = () => {
+  if (swiperInstanceMain.value.activeIndex !== 0) {
+    const index = swiperInstanceMain.value.activeIndex - 1
+
+    swiperInstanceMain.value.activeIndex = index
+    swiperInstanceMain.value.slideTo(index)
+
+    swiperInstancePagination.value.slideTo(index)
+    swiperInstancePagination.value.activeIndex = index
+  }
+}
+
+const isLgAndMore = computed(() => screenWidth.value > 1024)
+const isMd = computed(() => screenWidth.value > 768 && screenWidth.value < 1024)
+
+const slidesPerView = computed(() => {
+  if (isMd.value) {
+    return 3
+  }
+  if (isLgAndMore.value) {
+    return 5
+  }
+  return 2
+})
+
+const handleResize = () => {
+  screenWidth.value = window.innerWidth
+}
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
+<style>
+#slider-team-pagination .swiper-wrapper {
+  max-height: 234px;
+  display: flex;
+  align-items: center;
+}
+
+#slider-team-pagination .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

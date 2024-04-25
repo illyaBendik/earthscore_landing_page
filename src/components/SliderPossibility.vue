@@ -2,48 +2,47 @@
   <swiper
     id="slider-possibility"
     @init="init"
-    loop
-    :slidesPerView="isSmallScreen ? 1 : 1.5"
     :spaceBetween="30"
+    :allow-touch-move="false"
+    :slidesPerView="isSmallScreen ? 1 : 1.1"
     :speed="500"
   >
-    <swiper-slide v-for="(item, i) in list" :key="i">
-      <h2 :class="{ invisible: activeIndex !== i }" class="text-[40px] mb-8 px-6 lg:px-0 lg:pl-6">
-        {{ item.title }}
-      </h2>
-      <div
-        class="flex-none h-[583px] bg-cover bg-center rounded-md lg:ml-6 relative"
-        :style="{ 'background-image': 'url(' + item.img + ')' }"
-      >
-        <div
-          v-if="screenWidth < 1024 || isLast ? i === activeIndex : i === activeIndex + 1"
-          :class="{ 'right-[20px] bottom-[-65px]': isLast, 'right-[55%] bottom-[-65px]': !isLast }"
-          class="flex justify-end lg:justify-normal mt-5 gap-5 lg:mt-0 lg:absolute"
-        >
-          <span v-for="(_, btnIndex) in list" :key="btnIndex">
-            <button
-              @click="onClikcBtn(btnIndex)"
-              v-if="btnIndex !== list.length"
-              class="text-xl"
-              :class="{
-                'text-primary-A300': activeIndex === btnIndex,
-                'text-black-N70': activeIndex !== btnIndex
-              }"
-            >
-              0{{ btnIndex + 1 }}
-            </button>
-          </span>
+    <swiper-slide v-for="(item, i) in list" :key="i" v-slot="{ isActive }">
+      <div class="grid grid-cols-1 lg:grid-cols-4 z-20">
+        <h2 :class="{ hidden: !isActive }" class="text-[40px] mb-8 px-3 xl:px-14">
+          {{ item.title }}
+        </h2>
+        <div class="w-full col-span-3 relative">
+          <div
+            :style="{ 'background-image': 'url(' + item.img + ')' }"
+            class="h-[377px] lg:h-[583px] bg-cover bg-center rounded-md"
+          ></div>
+          <div v-if="i === activeIndex" class="fixed right-[10px] mt-5 space-x-5">
+            <span v-for="(_, btnIndex) in list" :key="btnIndex">
+              <button
+                @click="onClikcBtn(btnIndex)"
+                v-if="btnIndex !== list.length - 1"
+                class="text-xl"
+                :class="{
+                  'text-primary-A300': activeIndex === btnIndex,
+                  'text-black-N70': activeIndex !== btnIndex
+                }"
+              >
+                0{{ btnIndex + 1 }}
+              </button>
+            </span>
+          </div>
+          <p
+            :class="{ invisible: !isActive }"
+            class="text-[32px] lg:my-7 my-3 mt-12 lg:mt-3 px-4 lg:px-0"
+          >
+            {{ item.subtitle }}
+          </p>
+          <p :class="{ invisible: !isActive }" class="text-base px-4 lg:px-0">
+            {{ item.text }}
+          </p>
         </div>
       </div>
-      <p
-        :class="{ invisible: activeIndex !== i }"
-        class="text-[32px] lg:my-7 my-3 px-6 lg:px-0 lg:pl-6"
-      >
-        {{ item.subtitle }}
-      </p>
-      <p :class="{ invisible: activeIndex !== i }" class="text-base px-6 lg:px-0 lg:pl-6">
-        {{ item.text }}
-      </p>
     </swiper-slide>
   </swiper>
 </template>
@@ -81,6 +80,12 @@ Tailor your focus with our EarthScore SubScores, whether it's prioritizing local
     subtitle: 'The Direct Feedback Loop Function',
     text: `What do you think about the products you buy? What would you like to improve in terms of sustainability? Does the production process use too much water? Do you like the design of the "new packaging"? Tell the manufacturers directly what you think about their products and how they can be improved.`,
     img: SliderImg4
+  },
+  {
+    title: 'EarthScore for Everyone',
+    subtitle: 'EarthScore App',
+    text: `Elevate your shopping experience with our EarthScore Consumer App! Say goodbye to doubts and hello to confidence! With our app, you'll shop smarter and more sustainable, with profound knowledge at your fingertips. Our EarthScore scoring system ensures you make eco-friendly choices, avoiding greenwashing and reducing rebound effects. But that's not all! Share your lifestyle successes and track your progress seamlessly, just like your favorite fitness apps. Plus, your feedback directly shapes our features, making your experience even better. Shop with certainty, shop with our app.`,
+    img: SliderImg1
   }
 ]
 
@@ -89,13 +94,6 @@ const activeIndex = ref(0)
 const screenWidth = ref(window.innerWidth)
 
 const isSmallScreen = computed(() => screenWidth.value < 1024)
-
-const isLast = computed(() => {
-  if (swiperInstance.value) {
-    return activeIndex.value === swiperInstance.value.slides.length - 1
-  }
-  return false
-})
 
 const init = (e: any) => {
   swiperInstance.value = e

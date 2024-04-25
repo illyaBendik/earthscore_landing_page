@@ -13,9 +13,9 @@
       ></div>
       <div class="md:px-4 hidden sm:block col-span-3">
         <h5 class="text-[32px] font-light">{{ name }}</h5>
-        <p class="text-base text-primary-A300">{{ position }}</p>
-        <p class="text-base font-medium font-museo-sans-rounded">{{ deskPosition }}</p>
-        <p class="mt-8">
+        <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
+        <p class="text-base font-semibold font-museo-sans-rounded">{{ deskPosition }}</p>
+        <p class="mt-10">
           {{ text }}
         </p>
       </div>
@@ -29,7 +29,7 @@
   </div>
   <div class="px-4 mt-5 sm:hidden">
     <h5 class="text-[32px] font-light">{{ name }}</h5>
-    <p class="text-base text-primary-A300">{{ position }}</p>
+    <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
     <p class="text-base font-medium">{{ deskPosition }}</p>
     <p class="mt-10">
       {{ text }}
@@ -68,8 +68,6 @@ defineEmits(['click-prev', 'click-next'])
 .next {
   position: absolute;
   top: var(--swiper-navigation-top-offset, 50%);
-  /* width: calc(var(--swiper-navigation-size) / 44 * 27); */
-  /* height: var(--swiper-navigation-size); */
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
 }

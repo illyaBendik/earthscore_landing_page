@@ -16,7 +16,7 @@
         translate: ['120%', 0, -500]
       }
     }"
-    :modules="EffectCreative"
+    :modules="[EffectCreative]"
     :slides-per-view="1"
   >
     <swiper-slide
@@ -50,7 +50,7 @@
         translate: ['120%', 0, -500]
       }
     }"
-    :modules="EffectCreative"
+    :modules="modules"
     class="mySwiper2"
   >
     <swiper-slide v-for="(contentItem, contentItemIndex) in contentList" :key="contentItemIndex"
@@ -73,6 +73,8 @@ import { EffectCreative } from 'swiper/modules'
 import 'swiper/css'
 
 defineProps<{ contentList: { name: string; img: string; className: string; text: string }[] }>()
+
+const modules = [EffectCreative]
 
 const swiperInstanceMain = ref()
 const swiperInstancePagination = ref()
