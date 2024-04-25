@@ -11,7 +11,7 @@
     <button
       type="button"
       @click="toBlock('contact-form', 'start')"
-      class="rounded-md bg-primary-A300 font-light text-white mt-12 px-4 py-2"
+      class="rounded-md transition-all bg-primary-A300 hover:bg-white font-light hover:text-black-N900 text-white mt-12 px-4 py-2"
     >
       Book a demo
     </button>

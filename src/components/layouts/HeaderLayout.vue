@@ -12,12 +12,14 @@
     <div v-if="useRoute().name === 'home'" class="flex items-center gap-3">
       <button
         :class="{
-          'border-none text-white bg-primary-A300': isScrolled,
-          'border-black-N900 text-black-N900': !isScrolled
+          ' text-white bg-primary-A300 hover:bg-white   hover:border-black-N900 hover:text-black-N900':
+            isScrolled,
+          ' border-black-N900 text-black-N900 hover:text-white hover:bg-primary-A300 hover:border-transparent':
+            !isScrolled
         }"
         type="button"
         @click="toBlock('contact-form', 'start')"
-        class="text-base border rounded-lg px-3 py-1.5 hidden md:block font-light"
+        class="text-base border rounded-lg px-3 py-1.5 hidden md:block font-light transition-all"
       >
         Request a free demo
       </button>
