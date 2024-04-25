@@ -17,7 +17,7 @@
     </button>
   </div>
   <!-- SECOND BLOCK -->
-  <div class="client-block" id="mission-vision">
+  <div class="client-block" id="mission">
     <span class="block text-primary-A300 text-base md:text-xl mb-3 uppercase">Our Mission</span>
     <p class="text-2xl md:text-[40px] leading-[50px]">
       EarthScore is an expert for digitally automated, intelligent ESG-Reporting &
@@ -31,7 +31,7 @@
   <!-- THIRD BLOCK -->
   <div class="grid grid-cols-1 lg:grid-cols-3">
     <div class="bg-primary-A300 min-h-[500px] client-block">
-      <span class="text-white text-xl font-thin font-MuseoSans">360° Approach</span>
+      <span class="text-white text-xl font-thin font-MuseoSans uppercase">360° Approach</span>
       <p class="text-white text-[40px] my-5">EarthScore Solutions:</p>
       <p class="text-base text-white">
         At the core of our strategy lies the ESG Excellence Center, where knowledge meets action to
@@ -42,7 +42,7 @@
         hidden potentials with precision.
       </p>
     </div>
-    <div class="client-block bg-white border-l border-r lg:border-y border-gray-950">
+    <div class="client-block bg-white border-l border-r lg:border-y border-gray-950 relative">
       <p class="text-[40px] mb-5">For Business</p>
       <p class="text-base">
         ESG readiness is one of the biggest business opportunities in recent history. We marry
@@ -50,13 +50,13 @@
       </p>
       <button
         @click="toBlock('slider-consumer', 'start')"
-        class="flex items-center space-x-3 mt-5 md:mt-16"
+        class="flex items-center space-x-3 mt-5 md:mt-16 lg:absolute lg:top-[40%] lg:-translate-y-[-40%]"
       >
         <DownIcon class="text-primary-A300 text-4xl md:text-6xl"></DownIcon>
         <span class="font-light text-base md:text-xl">Learn More</span>
       </button>
     </div>
-    <div class="client-block bg-white border border-gray-950">
+    <div class="client-block bg-white border border-gray-950 relative">
       <p class="text-[40px] mb-5">For Consumers</p>
       <p class="text-base">
         Our commitment is fostering sustainable lifestyle. We offer a user-friendly tool for making
@@ -64,7 +64,7 @@
       </p>
       <button
         @click="toBlock('slider-possibility', 'start')"
-        class="flex items-center space-x-3 mt-5 md:mt-16"
+        class="flex items-center space-x-3 mt-5 md:mt-16 lg:absolute lg:top-[40%] lg:-translate-y-[-40%]"
       >
         <DownIcon class="text-primary-A300 text-4xl md:text-6xl"></DownIcon>
         <span class="font-light text-base md:text-xl">Learn More</span>
@@ -86,7 +86,7 @@
   <!-- SEVEN BLOCK -->
   <SliderPossibility></SliderPossibility>
   <!-- EIGHT  BLOCK -->
-  <h3 class="text-[32px] md:text-[40px] px-6">Meet the EarthScore Team</h3>
+  <h3 class="text-[32px] md:text-[40px] px-6 py-12">Meet the EarthScore Team</h3>
   <SliderTeam></SliderTeam>
   <!-- NINE  BLOCK -->
   <div class="client-block grid md:grid-cols-2">

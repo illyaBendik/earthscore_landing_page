@@ -17,7 +17,7 @@
         }"
         type="button"
         @click="toBlock('contact-form', 'start')"
-        class="text-lg border rounded-lg px-3 py-1.5 hidden md:block font-light"
+        class="text-base border rounded-lg px-3 py-1.5 hidden md:block font-light"
       >
         Request a free demo
       </button>
