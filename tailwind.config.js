@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-import defaultTheme from 'tailwindcss/defaultTheme'
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        'museo-sans-rounded': ['museo-sans-rounded', ...defaultTheme.fontFamily.sans]
+        primary: ['Museo Sans Rounded', 'sans-serif']
       },
       colors: {
         primary: {

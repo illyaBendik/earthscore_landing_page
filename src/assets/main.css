@@ -8,11 +8,7 @@
   *,
   *::before,
   *::after {
-    @apply box-border m-0 font-museo-sans-rounded;
-  }
-
-  html {
-    @apply font-museo-sans-rounded;
+    @apply box-border m-0 font-primary;
   }
 }
 
