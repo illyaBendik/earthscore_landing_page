@@ -10,7 +10,7 @@
           >
           <input
             type="text"
-            class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b-2 border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Enter your name"
           />
         </div>
@@ -22,7 +22,7 @@
           >
           <input
             type="text"
-            class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b-2 border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="Enter your email"
           />
         </div>
