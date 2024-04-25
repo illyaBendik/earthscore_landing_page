@@ -7,15 +7,15 @@
       <div class="my-4 md:ml-5 md:mr-10">
         <span class="text-base">Copyright © 2024 WhatsGreen GmbH</span>
       </div>
-      <div>
+      <div class="space-x-12">
         <RouterLink
           :to="{ name: 'impressum' }"
-          class="text-base mx-12 transition-all hover:text-primary-A300"
+          class="text-base transition-all hover:text-primary-A300"
           >Imprint</RouterLink
         >
         <RouterLink
           :to="{ name: 'privacy-policy' }"
-          class="text-base mx-12 transition-all hover:text-primary-A300"
+          class="text-base transition-all hover:text-primary-A300"
           >Privacy Policy</RouterLink
         >
       </div>
