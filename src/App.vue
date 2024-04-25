@@ -8,7 +8,7 @@
         <MenuIcon class="text-[28px]"></MenuIcon>
       </button>
     </HeaderLayout>
-    <SidebarLayout v-show="showSideBar" @close="toggleSidebar"></SidebarLayout>
+    <SidebarLayout :is-open="showSideBar" @close="toggleSidebar"></SidebarLayout>
     <RouterView></RouterView>
     <FooterLayout></FooterLayout>
   </div>
