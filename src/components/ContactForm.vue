@@ -40,7 +40,10 @@
         ></textarea>
       </div>
 
-      <button type="button" class="bg-primary-A300 text-white text-lg rounded-lg px-4 py-2 mt-10">
+      <button
+        type="button"
+        class="text-white bg-primary-A300 hover:bg-white border transition-all hover:border-black-N900 hover:text-black-N900 text-lg rounded-lg px-4 py-2 mt-10"
+      >
         Send message
       </button>
     </div>

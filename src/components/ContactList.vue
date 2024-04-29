@@ -15,14 +15,15 @@
       <span class="text-xl"> info@earthscore.com</span></a
     >
     <a
+      target="_blank"
       class="hover:text-primary-A300 hover:border-primary-A300 inline-block transition-al border-b border-0.5 border-black-N80"
-      href="https://www.linkedin.com/"
+      href="https://www.linkedin.com/company/whatsgreen-gmbh/"
     >
       LinkedIn
     </a>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import CallIcon from '@/components/icons/CallIcon.vue'
 import PostIcon from '@/components/icons/PostIcon.vue'
 </script>
