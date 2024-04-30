@@ -32,7 +32,7 @@
   <div class="grid grid-cols-1 lg:grid-cols-3">
     <div class="bg-primary-A300 min-h-[500px] client-block">
       <span class="text-white text-xl uppercase">360° Approach</span>
-      <p class="text-white text-[40px] my-5">EarthScore Solutions:</p>
+      <p class="text-white text-[32px] my-5">EarthScore Solutions:</p>
       <p class="text-base text-white">
         At the core of our strategy lies the ESG Excellence Center, where knowledge meets action to
         seize unprecedented opportunities in sustainability. Backed by a robust science foundation,
@@ -43,7 +43,7 @@
       </p>
     </div>
     <div class="client-block bg-white border-l border-r lg:border-y border-gray-950 relative">
-      <p class="text-[40px] mb-5">For Business</p>
+      <p class="text-[32px] mb-5">For Business</p>
       <p class="text-base">
         ESG readiness is one of the biggest business opportunities in recent history. We marry
         knowledge with action, ensuring that our endeavors yield tangible results.
@@ -61,7 +61,7 @@
       </button>
     </div>
     <div class="client-block bg-white border border-gray-950 relative">
-      <p class="text-[40px] mb-5">For Consumers</p>
+      <p class="text-[32px] mb-5">For Consumers</p>
       <p class="text-base">
         Our commitment is fostering sustainable lifestyle. We offer a user-friendly tool for making
         environmentally conscious consumer choices.
@@ -94,12 +94,12 @@
   <!-- SEVEN BLOCK -->
   <SliderPossibility></SliderPossibility>
   <!-- EIGHT  BLOCK -->
-  <h3 class="text-[32px] md:text-[40px] px-6 py-12">Meet the EarthScore Team</h3>
+  <h3 class="text-[32px] md:text-[32px] px-6 py-12">Meet the EarthScore Team</h3>
   <SliderTeam></SliderTeam>
   <!-- NINE  BLOCK -->
   <div class="client-block grid md:grid-cols-2">
     <div class="flex flex-col">
-      <h2 class="text-[40px]">Book a Demo!</h2>
+      <h2 class="text-[32px]">Book a Demo!</h2>
       <p class="text-xl mt-5">Get in touch with our experts!</p>
       <div class="mt-10 md:mt-20 mb-10">
         <ContactList></ContactList>

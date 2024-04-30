@@ -1,5 +1,5 @@
 <template>
-  <div class="border z-50 fixed w-full md:w-[40vh] right-0 h-screen bg-white slide-animation">
+  <div class="border z-50 fixed w-full md:w-96 right-0 h-screen bg-white slide-animation">
     <div class="pl-8 pr-4 pt-5">
       <div class="flex justify-end space-x-3">
         <button class="p-2 text-2xl flex items-center text-black-N100 space-x-2">

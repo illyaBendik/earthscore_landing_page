@@ -12,7 +12,7 @@
         :style="{ 'background-image': 'url(' + img + ')' }"
       ></div>
       <div class="md:px-4 hidden sm:block col-span-3">
-        <h5 class="text-[32px]">{{ name }}</h5>
+        <h5 class="text-[28px]">{{ name }}</h5>
         <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
         <p class="text-base font-medium">{{ deskPosition }}</p>
         <p v-if="isActive" class="mt-10">
@@ -28,7 +28,7 @@
     </button>
   </div>
   <div class="px-4 mt-5 sm:hidden">
-    <h5 class="text-[32px]">{{ name }}</h5>
+    <h5 class="text-[28px]">{{ name }}</h5>
     <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
     <p class="text-base font-medium">{{ deskPosition }}</p>
     <p v-if="isActive" class="mt-10">

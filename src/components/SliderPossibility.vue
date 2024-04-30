@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-4 z-20">
-    <h2 class="text-[40px] mb-8 px-3 xl:px-10">EarthScore for Everyone</h2>
+    <h2 class="text-[32px] mb-8 px-3 xl:px-10">EarthScore for Everyone</h2>
     <div class="col-span-3">
       <swiper
         id="slider-possibility"
