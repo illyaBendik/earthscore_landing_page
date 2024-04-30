@@ -1,5 +1,7 @@
 <template>
-  <div class="border z-50 fixed w-full md:w-96 right-0 h-screen bg-white slide-animation">
+  <div
+    class="border z-50 fixed w-full md:w-96 right-0 h-screen bg-white slide-animation scrollbar overflow-y-auto"
+  >
     <div class="pl-8 pr-4 pt-5">
       <div class="flex justify-end space-x-3">
         <button class="p-2 text-2xl flex items-center text-black-N100 space-x-2">
@@ -25,7 +27,7 @@
       </ul>
     </div>
     <hr class="bg-black-N900 h-0.5" />
-    <div class="px-8">
+    <div class="px-8 pb-3">
       <span class="block text-3xl py-16">Contact:</span>
       <ContactList></ContactList>
     </div>
