@@ -8,7 +8,7 @@
   *,
   *::before,
   *::after {
-    @apply box-border m-0 font-primary;
+    @apply box-border m-0 font-primary font-light;
   }
 }
 

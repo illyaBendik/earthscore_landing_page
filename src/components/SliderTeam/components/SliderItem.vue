@@ -12,10 +12,10 @@
         :style="{ 'background-image': 'url(' + img + ')' }"
       ></div>
       <div class="md:px-4 hidden sm:block col-span-3">
-        <h5 class="text-[32px] font-light">{{ name }}</h5>
+        <h5 class="text-[32px]">{{ name }}</h5>
         <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
-        <p class="text-base font-semibold font-museo-sans-rounded">{{ deskPosition }}</p>
-        <p class="mt-10">
+        <p class="text-base font-medium">{{ deskPosition }}</p>
+        <p v-if="isActive" class="mt-10">
           {{ text }}
         </p>
       </div>
@@ -28,10 +28,10 @@
     </button>
   </div>
   <div class="px-4 mt-5 sm:hidden">
-    <h5 class="text-[32px] font-light">{{ name }}</h5>
+    <h5 class="text-[32px]">{{ name }}</h5>
     <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
     <p class="text-base font-medium">{{ deskPosition }}</p>
-    <p class="mt-10">
+    <p v-if="isActive" class="mt-10">
       {{ text }}
     </p>
   </div>
@@ -48,6 +48,7 @@ defineProps<{
   img: string
   isFirst: boolean
   isLast: boolean
+  isActive: boolean
 }>()
 
 defineEmits(['click-prev', 'click-next'])
@@ -80,6 +81,6 @@ defineEmits(['click-prev', 'click-next'])
 
 #slider-team .swiper-wrapper {
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 </style>

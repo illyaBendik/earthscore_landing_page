@@ -4,14 +4,14 @@
     :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
     class="w-full min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
   >
-    <h1 class="text-[32px] md:text-6xl font-light text-center leading-[50px] md:leading-[80px]">
+    <h1 class="text-[32px] md:text-6xl text-center leading-[50px] md:leading-[80px]">
       EarthScore <br class="my-2" />
       ESG Opportunities
     </h1>
     <button
       type="button"
       @click="toBlock('contact-form', 'start')"
-      class="rounded-md transition-all bg-primary-A300 hover:bg-white font-light hover:text-black-N900 text-white mt-12 px-4 py-2"
+      class="rounded-md transition-all bg-primary-A300 hover:bg-white hover:text-black-N900 text-white mt-12 px-4 py-2"
     >
       Book a demo
     </button>
@@ -19,11 +19,11 @@
   <!-- SECOND BLOCK -->
   <div class="client-block" id="mission">
     <span class="block text-primary-A300 text-base md:text-xl mb-3 uppercase">Our Mission</span>
-    <p class="text-2xl md:text-[40px] leading-[50px] font-light">
+    <p class="text-2xl md:text-[40px] leading-[50px]">
       EarthScore is an expert for digitally automated, intelligent ESG-Reporting &
       Change-Management.
     </p>
-    <p class="text-2xl md:text-[40px] leading-[50px] font-light">
+    <p class="text-2xl md:text-[40px] leading-[50px]">
       We define the new market standard for corporate sustainability solutions where prosperity and
       stewardship coexist.
     </p>
@@ -31,9 +31,9 @@
   <!-- THIRD BLOCK -->
   <div class="grid grid-cols-1 lg:grid-cols-3">
     <div class="bg-primary-A300 min-h-[500px] client-block">
-      <span class="text-white text-xl font-light uppercase">360° Approach</span>
-      <p class="text-white text-[40px] my-5 font-light">EarthScore Solutions:</p>
-      <p class="text-base text-white font-light">
+      <span class="text-white text-xl uppercase">360° Approach</span>
+      <p class="text-white text-[40px] my-5">EarthScore Solutions:</p>
+      <p class="text-base text-white">
         At the core of our strategy lies the ESG Excellence Center, where knowledge meets action to
         seize unprecedented opportunities in sustainability. Backed by a robust science foundation,
         our solutions are grounded in data-driven insights, including our EarthScore Market Feedback
@@ -43,8 +43,8 @@
       </p>
     </div>
     <div class="client-block bg-white border-l border-r lg:border-y border-gray-950 relative">
-      <p class="text-[40px] mb-5 font-light">For Business</p>
-      <p class="text-base font-light">
+      <p class="text-[40px] mb-5">For Business</p>
+      <p class="text-base">
         ESG readiness is one of the biggest business opportunities in recent history. We marry
         knowledge with action, ensuring that our endeavors yield tangible results.
       </p>
@@ -55,14 +55,14 @@
         <DownIcon
           class="text-primary-A300 text-4xl md:text-5xl transition-all group-hover:rotate-0 rotate-[-90deg]"
         ></DownIcon>
-        <span class="font-light text-base md:text-xl transition-all group-hover:text-primary-A300"
+        <span class="text-base md:text-xl transition-all group-hover:text-primary-A300"
           >Learn More</span
         >
       </button>
     </div>
     <div class="client-block bg-white border border-gray-950 relative">
-      <p class="text-[40px] mb-5 font-light">For Consumers</p>
-      <p class="text-base font-light">
+      <p class="text-[40px] mb-5">For Consumers</p>
+      <p class="text-base">
         Our commitment is fostering sustainable lifestyle. We offer a user-friendly tool for making
         environmentally conscious consumer choices.
       </p>
@@ -73,7 +73,7 @@
         <DownIcon
           class="text-primary-A300 text-4xl md:text-5xl transition-all group-hover:rotate-0 rotate-[-90deg]"
         ></DownIcon>
-        <span class="font-light text-base md:text-xl transition-all group-hover:text-primary-A300"
+        <span class="text-base md:text-xl transition-all group-hover:text-primary-A300"
           >Learn More</span
         >
       </button>

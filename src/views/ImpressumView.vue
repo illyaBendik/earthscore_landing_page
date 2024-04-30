@@ -3,8 +3,8 @@
     <div class="container mx-auto">
       <div class="grid md:grid-cols-2">
         <div class="order-last md:order-first px-4 pt-4 pb-20 md:pb-0 md:pt-0">
-          <h1 class="text-[32px] font-light mb-8">Impressum</h1>
-          <div class="font-light text-base mb-6">
+          <h1 class="text-[32px] mb-8">Impressum</h1>
+          <div class="text-base mb-6">
             <p>WhatsGreen Research & Science GmbH</p>
             <p>Rommerskirchener Str. 21</p>
             <p>Walzwerk Atelier 65</p>
@@ -14,7 +14,7 @@
             <p>Email: info@earthscore.com</p>
           </div>
 
-          <div class="font-light text-base">
+          <div class="text-base">
             <p>Registergericht: AG Köln</p>
             <p>Registernummer: HRB 112686</p>
             <p>Geschäftsführer: Manuel Mattern</p>

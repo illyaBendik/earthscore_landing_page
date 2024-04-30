@@ -1,37 +1,35 @@
 <template>
-  <transition name="fade">
-    <div v-show="isOpen" class="border z-50 fixed w-full md:w-96 right-0 h-screen bg-white">
-      <div class="pl-8 pr-4 pt-5">
-        <div class="flex justify-end space-x-3">
-          <button class="p-2 text-2xl flex items-center text-black-N100 space-x-2">
-            <LangIcon></LangIcon> <span class="block font-light text-lg">EN</span>
-          </button>
-          <button
-            @click="$emit('close')"
-            class="border border-black-N900 rounded-md px-3 py-1.5 text-2xl"
-          >
-            <CloseIcon></CloseIcon>
-          </button>
-        </div>
-        <ul class="space-y-8 mb-20 mt-5">
-          <li
-            v-for="(contentItem, index) in list"
-            :key="index"
-            @click.prevent="onClick(contentItem.id)"
-          >
-            <a class="text-xl text-light" :href="`#${contentItem.id}`">
-              {{ `0${index + 1}` }} {{ contentItem.name }}
-            </a>
-          </li>
-        </ul>
+  <div class="border z-50 fixed w-full md:w-[40vh] right-0 h-screen bg-white slide-animation">
+    <div class="pl-8 pr-4 pt-5">
+      <div class="flex justify-end space-x-3">
+        <button class="p-2 text-2xl flex items-center text-black-N100 space-x-2">
+          <LangIcon></LangIcon> <span class="block text-lg">EN</span>
+        </button>
+        <button
+          @click="$emit('close')"
+          class="border border-black-N900 rounded-md px-3 py-1.5 text-2xl"
+        >
+          <CloseIcon></CloseIcon>
+        </button>
       </div>
-      <hr class="bg-black-N900 h-0.5" />
-      <div class="px-8">
-        <span class="block font-light text-3xl py-16">Contact:</span>
-        <ContactList></ContactList>
-      </div>
+      <ul class="space-y-8 mb-20 mt-5">
+        <li
+          v-for="(contentItem, index) in list"
+          :key="index"
+          @click.prevent="onClick(contentItem.id)"
+        >
+          <a class="text-xl text-light" :href="`#${contentItem.id}`">
+            {{ `0${index + 1}` }} {{ contentItem.name }}
+          </a>
+        </li>
+      </ul>
     </div>
-  </transition>
+    <hr class="bg-black-N900 h-0.5" />
+    <div class="px-8">
+      <span class="block text-3xl py-16">Contact:</span>
+      <ContactList></ContactList>
+    </div>
+  </div>
 </template>
 <script setup lang="ts">
 import { toBlock } from '@/utils/toBlock'
@@ -59,13 +57,13 @@ const onClick = (id: string) => {
 }
 </script>
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease-in;
+.slide-animation {
+  transform: translateX(100%);
+  transform-origin: right center;
+  transition: transform 0.8s;
 }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.menu-open .slide-animation {
+  transform: translateX(0);
 }
 </style>

@@ -19,7 +19,7 @@
         }"
         type="button"
         @click="toBlock('contact-form', 'start')"
-        class="text-base border rounded-lg px-3 py-1.5 hidden md:block font-light transition-all"
+        class="text-base border rounded-lg px-3 py-1.5 hidden md:block transition-all"
       >
         Request a free demo
       </button>

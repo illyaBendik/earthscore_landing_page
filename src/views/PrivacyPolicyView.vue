@@ -1,11 +1,9 @@
 <template>
   <div class="flex items-center mt-20">
-    <div
-      class="container mx-auto px-4 pt-4 pb-20 md:pb-0 md:pt-0 font-light text-base text-black-N900"
-    >
+    <div class="container mx-auto px-4 pt-4 pb-20 md:pb-0 md:pt-0 text-base text-black-N900">
       <div class="grid md:grid-cols-2 gap-5 items-center">
         <div class="order-last md:order-first">
-          <h1 class="text-[32px] font-light mb-8">Privacy Policy</h1>
+          <h1 class="text-[32px] mb-8">Privacy Policy</h1>
           <p class="text-xl pb-5">Allgemeine Informationen zur Datenverarbeitung</p>
           <p class="font-medium">Verantwortliche Stelle:</p>
           <p>WhatsGreen Research & Science GmbH</p>

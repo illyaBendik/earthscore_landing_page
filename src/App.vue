@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative" :class="{ 'menu-open': showSideBar }">
     <HeaderLayout>
       <button
         @click="toggleSidebar"

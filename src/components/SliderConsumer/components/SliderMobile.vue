@@ -1,9 +1,8 @@
 <template>
-  <h3 class="text-[32px] font-light mt-16 mb-8 px-6 md:px-14">EarthScore for Your Business</h3>
+  <h3 class="text-[32px] mt-16 mb-8 px-6 md:px-14">EarthScore for Your Business</h3>
 
   <swiper
     :grabCursor="true"
-    :effect="'creative'"
     @swiper="onSwiperPagination"
     @slideChange="isMain ? () => {} : onChangePagination($event)"
     :creativeEffect="{
@@ -16,11 +15,10 @@
         translate: ['120%', 0, -500]
       }
     }"
-    :modules="[EffectCreative]"
     :slides-per-view="1"
   >
     <swiper-slide
-      class="text-lg uppercase font-light px-6 md:px-14"
+      class="text-lg uppercase px-6 md:px-14"
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
     >
@@ -37,7 +35,6 @@
 
   <swiper
     :grabCursor="true"
-    :effect="'creative'"
     @swiper="onSwiperMain"
     @slideChange="isPagination ? () => {} : onChangeSlide($event)"
     :creativeEffect="{
@@ -50,16 +47,18 @@
         translate: ['120%', 0, -500]
       }
     }"
-    :modules="modules"
-    class="mySwiper2"
+    :slides-per-view="1.1"
   >
-    <swiper-slide v-for="(contentItem, contentItemIndex) in contentList" :key="contentItemIndex"
+    <swiper-slide
+      v-for="(contentItem, contentItemIndex) in contentList"
+      :key="contentItemIndex"
+      v-slot="{ isActive }"
       ><div class="px-5 pt-5">
         <div
           :style="{ 'background-image': 'url(' + contentItem.img + ')' }"
           class="h-[322px] bg-cover bg-center"
         ></div>
-        <p class="my-5">
+        <p v-if="isActive" class="my-5">
           {{ contentItem.text }}
         </p>
       </div></swiper-slide
@@ -69,12 +68,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { EffectCreative } from 'swiper/modules'
-import 'swiper/css'
 
 defineProps<{ contentList: { name: string; img: string; className: string; text: string }[] }>()
-
-const modules = [EffectCreative]
 
 const swiperInstanceMain = ref()
 const swiperInstancePagination = ref()

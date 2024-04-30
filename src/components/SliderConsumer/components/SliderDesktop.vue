@@ -25,7 +25,7 @@
       </swiper>
     </div>
     <div class="col-span-2 relative border-l border-l-black-N80">
-      <h3 class="text-[40px] ml-5 absolute left-0 font-light">EarthScore for Your Business</h3>
+      <h3 class="text-[40px] ml-5 absolute left-0">EarthScore for Your Business</h3>
       <swiper
         id="slider-consumer-desktop-pagination"
         class="mt-36"
@@ -38,7 +38,9 @@
         <swiper-slide v-for="(item, i) in contentList" :key="i" @click="onChangePagination(i)">
           <p
             :class="{
-              'text-black-N900': swiperInstanceMain ? i === swiperInstanceMain.activeIndex : false
+              'text-black-N900 font-medium': swiperInstanceMain
+                ? i === swiperInstanceMain.activeIndex
+                : false
             }"
             class="ml-5 uppercase text-xl text-black-N100 transition-all hover:text-black-N900 cursor-pointer pb-0"
           >

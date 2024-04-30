@@ -1,8 +1,9 @@
 <template>
   <div id="slider-team">
     <swiper :allow-touch-move="false" :slides-per-view="1" @init="onSwiperMain">
-      <swiper-slide v-for="(user, i) in users" :key="i">
+      <swiper-slide v-for="(user, i) in users" :key="i" v-slot="{ isActive }">
         <SliderItem
+          :isActive="isActive"
           :isFirst="swiperInstanceMain ? swiperInstanceMain.activeIndex === 0 : false"
           :isLast="swiperInstanceMain ? swiperInstanceMain.activeIndex === users.length - 1 : false"
           v-bind="user"
