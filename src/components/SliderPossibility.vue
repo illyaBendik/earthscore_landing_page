@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-4 z-20">
-    <h2 class="text-[32px] mb-8 px-3 xl:px-10">EarthScore for Everyone</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-4 z-20 py-12 md:py-16">
+    <h2 class="text-[32px] mb-8 px-3 xl:px-10">{{ t('homePage.screen7.title') }}</h2>
     <div class="col-span-3">
       <swiper
         id="slider-possibility"
@@ -24,8 +24,9 @@
                     v-if="btnIndex !== list.length - 1"
                     class="text-xl"
                     :class="{
-                      'text-primary-A300': activeIndex === btnIndex,
-                      'text-black-N70': activeIndex !== btnIndex
+                      'text-primary-A300 font-medium': activeIndex === btnIndex,
+                      'text-black-N70 transition-all hover:text-black-N900':
+                        activeIndex !== btnIndex
                     }"
                   >
                     0{{ btnIndex + 1 }}
@@ -34,7 +35,7 @@
               </div>
               <p
                 :class="{ invisible: !isActive }"
-                class="text-[32px] lg:my-7 my-3 mt-12 lg:mt-12 px-4 lg:px-0"
+                class="text-[18px] font-medium lg:my-7 mb-3 mt-16 lg:mt-12 px-4 lg:px-0"
               >
                 {{ item.title }}
               </p>
@@ -56,32 +57,34 @@ import SliderImg2 from '@/assets/img/B2C_2.png'
 import SliderImg3 from '@/assets/img/B2C_3.png'
 import SliderImg4 from '@/assets/img/B2C_4.png'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n({ useScope: 'global' })
 
 const list = [
   {
-    title: 'EarthScore App',
-    text: `Elevate your shopping experience with our EarthScore Consumer App! Say goodbye to doubts and hello to confidence! With our app, you'll shop smarter and more sustainable, with profound knowledge at your fingertips. Our EarthScore scoring system ensures you make eco-friendly choices, avoiding greenwashing and reducing rebound effects. But that's not all! Share your lifestyle successes and track your progress seamlessly, just like your favorite fitness apps. Plus, your feedback directly shapes our features, making your experience even better. Shop with certainty, shop with our app.`,
+    title: t('homePage.screen7.item1.title'),
+    text: t('homePage.screen7.item1.text'),
     img: SliderImg1
   },
   {
-    title: 'EarthScore for You – Confident, Convenient, Sustainable!',
-    text: 'Ever wondered about the true sustainability of your purchases? With our app, scan any barcode and discover the environmental impact of your products instantly. From groceries to gadgets, empower yourself to make eco-conscious choices. Easily find alternatives to reduce your footprint and improve your shopping habits. Take control of your impact on the planet—one scan at a time. Start scanning, start changing, start making a difference.',
+    title: t('homePage.screen7.item2.title'),
+    text: t('homePage.screen7.item2.text'),
     img: SliderImg2
   },
   {
-    title: 'More Advantages for You',
-    text: `Explore the depths of sustainability with our ES SubScores— Packaging, Environment, Product Quality, Social, and Health. Understand the overall sustainability of products and services of your choice, and how they contribute to your personal EarthScore.
-Tailor your focus with our EarthScore SubScores, whether it's prioritizing local products, focusing on health aspects, or avoiding harmful packaging. Dive deep into each dimension, uncovering layers of insight to shape your choices.`,
+    title: t('homePage.screen7.item3.title'),
+    text: t('homePage.screen7.item3.text'),
     img: SliderImg3
   },
   {
-    title: 'The Direct Feedback Loop Function',
-    text: `What do you think about the products you buy? What would you like to improve in terms of sustainability? Does the production process use too much water? Do you like the design of the "new packaging"? Tell the manufacturers directly what you think about their products and how they can be improved.`,
+    title: t('homePage.screen7.item4.title'),
+    text: t('homePage.screen7.item4.text'),
     img: SliderImg4
   },
   {
-    title: 'EarthScore App',
-    text: `Elevate your shopping experience with our EarthScore Consumer App! Say goodbye to doubts and hello to confidence! With our app, you'll shop smarter and more sustainable, with profound knowledge at your fingertips. Our EarthScore scoring system ensures you make eco-friendly choices, avoiding greenwashing and reducing rebound effects. But that's not all! Share your lifestyle successes and track your progress seamlessly, just like your favorite fitness apps. Plus, your feedback directly shapes our features, making your experience even better. Shop with certainty, shop with our app.`,
+    title: t('homePage.screen7.item1.title'),
+    text: t('homePage.screen7.item1.text'),
     img: SliderImg1
   }
 ]

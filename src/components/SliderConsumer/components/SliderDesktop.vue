@@ -11,7 +11,7 @@
       >
         <swiper-slide v-for="(item, i) in contentList" :key="i">
           <div class="relative flex justify-items items-center flex-col justify-center h-full">
-            <div class="max-w-[760px]">
+            <div class="px-16">
               <div
                 :style="{ 'background-image': 'url(' + item.img + ')' }"
                 class="w-full h-[414px] bg-cover bg-center rounded-md"
@@ -25,15 +25,15 @@
       </swiper>
     </div>
     <div class="col-span-2 relative border-l border-l-black-N80">
-      <h3 class="text-[32px] ml-5 absolute left-0">EarthScore for Your Business</h3>
+      <h3 class="text-[40px] absolute left-0 pl-[64px]">{{ t('homePage.screen5.title') }}</h3>
       <swiper
         id="slider-consumer-desktop-pagination"
-        class="mt-36"
+        class="mt-[150px]"
         @init="onSwiperPagination"
         direction="vertical"
         :slidesPerView="5"
         :speed="500"
-        :height="450"
+        :height="340"
       >
         <swiper-slide v-for="(item, i) in contentList" :key="i" @click="onChangePagination(i)">
           <p
@@ -42,7 +42,7 @@
                 ? i === swiperInstanceMain.activeIndex
                 : false
             }"
-            class="ml-5 uppercase text-xl text-black-N100 transition-all hover:text-black-N900 cursor-pointer pb-0"
+            class="uppercase text-xl text-black-N100 transition-all hover:text-black-N900 cursor-pointer pb-0 pl-[64px]"
           >
             {{ item.name }}
           </p>
@@ -52,11 +52,11 @@
       <div
         class="absolute left-0 z-[9999] h-[28px] w-[4px] bg-primary-A300 transition-top duration-1000 ease-in-out transition-height"
         :class="{
-          'top-[145px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 0,
-          'top-[235px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 1,
-          'top-[325px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 2,
-          'top-[415px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 3,
-          'top-[505px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 4
+          'top-[170px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 0,
+          'top-[230px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 1,
+          'top-[305px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 2,
+          'top-[370px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 3,
+          'top-[445px]': swiperInstanceMain && swiperInstanceMain.activeIndex === 4
         }"
       ></div>
     </div>
@@ -65,6 +65,9 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n({ useScope: 'global' })
 
 defineProps<{ contentList: { name: string; img: string; className: string; text: string }[] }>()
 
@@ -101,6 +104,7 @@ const onChangeSlide = (e: any) => {
 }
 
 #slider-consumer-desktop-pagination .swiper-slide {
-  height: 100px;
+  display: flex;
+  align-items: center;
 }
 </style>

@@ -10,6 +10,9 @@
             <p>Walzwerk Atelier 65</p>
             <p>50259 Pulheim</p>
             <p>Deutschland</p>
+          </div>
+
+          <div class="text-base mb-6">
             <p>Telefon: +49 (0)223 4786954 (Zentrale)</p>
             <p>Email: info@earthscore.com</p>
           </div>

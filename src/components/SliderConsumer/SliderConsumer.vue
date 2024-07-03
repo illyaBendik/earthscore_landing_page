@@ -16,38 +16,41 @@ import Img2 from '@/assets/img/B2B_2.png'
 import Img3 from '@/assets/img/B2B_3.png'
 import Img4 from '@/assets/img/B2B_3.png'
 import Img5 from '@/assets/img/B2B_5.png'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const contentList = [
+const { t } = useI18n({ useScope: 'global' })
+
+const contentList = computed(() => [
   {
-    name: 'ESG REPORT Auto Pilot',
+    name: t('homePage.screen5.item1.title'),
     img: Img1,
     className: 'min-w-[250px]',
-    text: 'Stay on top of your sustainability game effortlessly with our cutting-edge Audit Tool, putting you miles ahead of regulatory demands and stakeholder anticipations. Harness the power of our streamlined ES Smart Audits to not only meet but exceed global sustainability benchmarks and industry standards. Elevate your brand by showcasing unwavering commitment to transparency, integrity, and responsibility, captivating stakeholders, investors, and customers alike. '
+    text: t('homePage.screen5.item1.text')
   },
   {
-    name: 'EARTHSCORE DASHBOARD',
+    name: t('homePage.screen5.item2.title'),
     img: Img2,
     className: 'min-w-[250px]',
-    text: 'Welcome to our cutting-edge Business Intelligence Dashboard. Customize your dashboard effortlessly with our range of widgets, ensuring your analytics reflect your unique business needs. Stay compliant effortlessly with pre-selected key performance indicators (KPIs) tailored for regulatory requirements, putting you ahead of the curve from day one. Align your KPIs with company targets, driving strategic objectives forward. Dive deep into data with intuitive drill-down options. Elevate your strategy with personalised ESG excellence and A.I. solutions for long-term success. '
+    text: t('homePage.screen5.item2.text')
   },
   {
-    name: 'CONSULTANT EXPERIENCE MEETS EARTHSCORE Expert',
+    name: t('homePage.screen5.item3.title'),
     img: Img3,
     className: 'min-w-[550px]',
-    text: "Sustainability isn't just a hurdle— sustainability is imperative for growth and resilience. It's time to shift from reacting to acting. That's where we come in. Our tailored ESG consulting services guide you through every step of the process. From data collection to AI reporting, we'll ensure you're not just compliant, but thriving in the new era of sustainability. Our approach isn't just about meeting requirements—it's about enhancing your business relationships and exploring new opportunities. With expertise, experience, and a reputation for excellence, we're here to transform your business into a sustainability powerhouse. Don't wait for challenges to overwhelm you—embrace the future today."
+    text: t('homePage.screen5.item3.text')
   },
   {
-    name: 'ESG passport',
+    name: t('homePage.screen5.item4.title'),
     img: Img4,
     className: 'min-w-[150px]',
-
-    text: 'Instantly share your ESG Audit Score with anyone using a generated QR code.'
+    text: t('homePage.screen5.item4.text')
   },
   {
-    name: 'EarthScore A.I.',
+    name: t('homePage.screen5.item5.title'),
     img: Img5,
     className: 'min-w-[180px]',
-    text: "Sustainability isn't just a hurdle— sustainability is imperative for growth and resilience. It's time to shift from reacting to acting. That's where we come in. Our tailored ESG consulting services guide you through every step of the process. From data collection to AI reporting, we'll ensure you're not just compliant, but thriving in the new era of sustainability. Our approach isn't just about meeting requirements—it's about enhancing your business relationships and exploring new opportunities. With expertise, experience, and a reputation for excellence, we're here to transform your business into a sustainability powerhouse. Don't wait for challenges to overwhelm you—embrace the future today."
+    text: t('homePage.screen5.item5.text')
   }
-]
+])
 </script>

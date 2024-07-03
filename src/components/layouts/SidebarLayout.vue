@@ -4,8 +4,14 @@
   >
     <div class="pl-8 pr-4 pt-5">
       <div class="flex justify-end space-x-3">
-        <button class="p-2 text-2xl flex items-center text-black-N100 space-x-2">
-          <LangIcon></LangIcon> <span class="block text-lg">EN</span>
+        <button
+          @click="setLocale"
+          class="p-2 text-2xl flex items-center text-black-N100 space-x-2 transition-all hover:text-black-N900 group"
+        >
+          <LangIcon></LangIcon>
+          <span class="block text-lg uppercase transition-all group-hover:font-medium">{{
+            locale
+          }}</span>
         </button>
         <button
           @click="$emit('close')"
@@ -20,7 +26,10 @@
           :key="index"
           @click.prevent="onClick(contentItem.id)"
         >
-          <a class="text-xl text-light" :href="`#${contentItem.id}`">
+          <a
+            class="text-xl text-light transition-all hover:font-medium"
+            :href="`#${contentItem.id}`"
+          >
             {{ `0${index + 1}` }} {{ contentItem.name }}
           </a>
         </li>
@@ -28,7 +37,7 @@
     </div>
     <hr class="bg-black-N900 h-0.5" />
     <div class="px-8 pb-3">
-      <span class="block text-3xl py-16">Contact:</span>
+      <span class="block text-3xl py-16">{{ t('sidebar.contact') }}:</span>
       <ContactList></ContactList>
     </div>
   </div>
@@ -38,20 +47,31 @@ import { toBlock } from '@/utils/toBlock'
 import ContactList from '@/components/ContactList.vue'
 import CloseIcon from '@/components/icons/CloseIcon.vue'
 import LangIcon from '@/components/icons/LangIcon.vue'
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
-const list = [
-  { name: 'Mission', id: 'mission' },
-  { name: 'Our Solutions', id: 'our-solutions' },
-  { name: 'B2B Solution', id: 'slider-possibility' },
-  { name: 'B2C Solution', id: 'slider-consumer' },
-  { name: 'Team', id: 'slider-team' },
-  { name: 'Get in Touch', id: 'contact-form' }
-]
+const EN_LOCALE = 'en'
+const DE_LOCALE = 'de'
+const { locale, t } = useI18n({ useScope: 'global' })
+
+const list = computed(() => [
+  { name: t('sidebar.list.item1'), id: 'mission' },
+  { name: t('sidebar.list.item2'), id: 'our-solutions' },
+  { name: t('sidebar.list.item3'), id: 'slider-possibility' },
+  { name: t('sidebar.list.item4'), id: 'slider-consumer' },
+  { name: t('sidebar.list.item5'), id: 'slider-team' },
+  { name: t('sidebar.list.item6'), id: 'contact-form' }
+])
 
 defineProps<{
   isOpen: boolean
 }>()
 const emit = defineEmits(['close'])
+
+const setLocale = () => {
+  locale.value = locale.value == EN_LOCALE ? DE_LOCALE : EN_LOCALE
+  localStorage.setItem('lang', locale.value)
+}
 
 const onClick = (id: string) => {
   emit('close')

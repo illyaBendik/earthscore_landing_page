@@ -1,0 +1,143 @@
+{
+  "header": {
+    "btn": "Request a free demo"
+  },
+  "footer": {
+    "link1": "Imprint",
+    "link2": "Privacy Policy"
+  },
+  "sidebar": {
+    "list": {
+      "item1": "Vision",
+      "item2": "Our Solutions",
+      "item3": "For Business",
+      "item4": "For Consumers",
+      "item5": "Team",
+      "item6": "Get in Touch"
+    },
+    "contact": "Contact"
+  },
+  "homePage": {
+    "screen1": {
+      "subtitle": "turning choices into earth's voice",
+      "btn": "Book a demo"
+    },
+    "screen2": {
+      "title": "Our Vision",
+      "text": "At EarthScore, we envision a future where sustainability is a way of life, integral to society and ensuring a thriving planet for future generations. We are committed to fostering a world where businesses operate responsibly, consumers make informed choices, and every action contributes to collective prosperity and planetary health."
+    },
+    "screen3": {
+      "block1": {
+        "title": "360° Approach",
+        "subtitle": "EarthScore Excellence Center:",
+        "text": "At the core of EarthScore, our AI-powered ESG Excellence Center harnesses expert insights and sophisticated AI analytics to drive sustainable solutions across industries. Our center focuses on detailed, precision-driven data analysis and employs cutting-edge technologies to innovate and enhance sustainable practices. By integrating diverse industry expertise, we are setting global standards for responsible and effective business operations."
+      },
+      "block2": {
+        "title": "For Business",
+        "text": "EarthScore offers advanced ESG solutions designed to not only ensure compliance but also drive innovation and business growth. EarthScore combines knowledge with action, ensuring that our endeavors yield tangible results."
+      },
+      "block3": {
+        "title": "For Consumers",
+        "text": "Transform your shopping experience and foster your sustainable lifestyle. The EarthScore App simplifies complex sustainability data, empowering you to shop with confidence and clarity."
+      },
+      "btn": "Learn more"
+    },
+    "screen4": {
+      "title": "EarhtScore Business Solutions:",
+      "subtitle": "Crafting Decisions that Echo Across the Planet",
+      "text": "Our platform offers flexible adaptability to your specific business needs and evolving regulatory landscapes."
+    },
+    "screen5": {
+      "title": "EarthScore for Your Business",
+      "item1": {
+        "title": "ESG REPORT Auto Pilot",
+        "text": "Stay on top of your sustainability game effortlessly with our ESG Report Auto Pilot, putting you miles ahead of regulatory demands and stakeholder anticipations Our automated reporting tool streamlines the ESG reporting process, ensuring accuracy and efficiency while providing valuable insights into your sustainability performance. With the ESG Report Auto Pilot, you can navigate regulatory requirements with ease and focus on driving sustainable growth. Our solutions are scalable and cater to businesses of all sizes, guiding businesses through every step of the process, from data collection to AI reporting, ensuring compliance and driving strategic objectives forward."
+      },
+      "item2": {
+        "title": "CONSULTANT EXPERIENCE MEETS EARTHSCORe expert",
+        "text": "Our tailored consulting services combine decades of industry experience with the latest advancements in sustainability technology. From comprehensive ESG audits to strategic implementation plans, we partner with businesses to turn sustainability challenges into opportunities for growth, resilience, and competitive advantage. Our approach isn't just about meeting requirements - it's about enhancing your business relationships and exploring new opportunities. Our ESG Excellence Center and AI-supported services are tailored to meet your goals, offering personalised recommendations, scenario analysis, and predictive insights. Experience the synergy of AI and human intelligence. With expertise, experience, and a reputation for excellence, we're here to transform your business into a sustainability powerhouse. Don't wait for challenges to overwhelm you - embrace the future today."
+      },
+      "item3": {
+        "title": "EarthScore AI",
+        "text": "Advance with confidence into the future of business strategy with EarthScoreAI, our state-of-the-art AI solution designed to harness the power of the latest technological advancements. EarthScore equips businesses with actionable insights and sophisticated predictive analytics, helping them stay ahead in a competitive landscape. Our AI platform, EarthScore AI, not only forecasts emerging trends but also identifies potential risks and uncovers valuable hidden opportunities. By integrating these insights, businesses are empowered to navigate and excel in the ever-evolving and dynamic realm of sustainability. This proactive approach ensures that your company can adapt and respond effectively, securing a sustainable and profitable future."
+      },
+      "item4": {
+        "title": "EarthScore Dashboard",
+        "text": "Welcome to our cutting-edge Business Intelligence Dashboard. Customize your dashboard effortlessly with our range of widgets, ensuring your analytics reflect your unique business needs. Stay compliant effortlessly with pre-selected key performance indicators (KPIs) tailored for regulatory requirements, putting you ahead of the curve from day one. Align your KPIs with company targets, driving strategic objectives forward. Dive deep into data with intuitive drill-down options. Elevate your strategy with personalised ESG excellence and AI solutions for long-term success. Our Dashboard offers comprehensive analysis through a double materiality approach, with robust filtering options that include the ability to sort by Scope 1-4 or ESG criteria. It features customizable dashboards that enable you to access pertinent information and efficiently monitor your sustainability objectives."
+      },
+      "item5": {
+        "title": "Streamlined ESG Compliance",
+        "text": "Our platform simplifies data entry across multiple standards like GRI, ESRS, and SFDR. By integrating advanced AI, it categorizes and aligns your data from a single input, ensuring accuracy and adherence to international standards. This AI-driven process automates data aggregation and validation while maintaining integrity and reliability. Enter data once to comply with multiple standards, reducing data collection costs. Enjoy real-time reporting and analytics with continuous updates for compliance status, detailed reports, and actionable insights. Our system also streamlines compliance monitoring, automatically adjusting to the latest ESG regulations to keep your business compliant with minimal manual effort."
+      }
+    },
+    "screen6": {
+      "title": "EarthScore App:",
+      "subtitle": "Dein Kompass für bewusstes Konsumieren",
+      "text": "Scannen, lernen und handeln - machen Sie jeden Einkauf zu einem Schritt in Richtung Nachhaltigkeit. Beteiligen Sie sich, engagieren Sie sich und nehmen Sie Einfluss. Klug einkaufen, grün leben!"
+    },
+    "screen7": {
+      "title": "EarthScore for Consumers",
+      "item1": {
+        "title": "EarthScore App",
+        "text": "Elevate your shopping experience with our EarthScore Consumer App! Say goodbye to doubts and hello to confidence! With our app, you'll shop smarter and more sustainable, with profound knowledge at your fingertips. Our EarthScore scoring system ensures you make eco-friendly choices, avoiding greenwashing and reducing rebound effects. But that's not all! Share your lifestyle successes and track your progress seamlessly. Plus, your feedback directly shapes our features, making your experience even better. Shop with certainty, shop with our app. Scan products, uncover their environmental impact, and make informed, sustainable choices that align with your values."
+      },
+      "item2": {
+        "title": "Empower Your Shopping Experience",
+        "text": "Ever wondered about the true sustainability of your purchases? With our app, scan any barcode and discover the environmental impact of your products instantly. From groceries to gadgets, empower yourself to make eco-conscious choices. Easily find alternatives to reduce your footprint and improve your shopping habits. Take control of your impact on the planet—one scan at a time. Start scanning, start changing, start making a difference."
+      },
+      "item3": {
+        "title": "Tailored Sustainability with ES SubScores",
+        "text": "Delve deeper into sustainability with the EarthScore SubScores. Whether you prioritize reducing packaging waste, supporting social responsibility, or prioritizing health and wellness, our app provides detailed insights tailored to your preferences, helping you make sustainable choices that matter to you."
+      },
+      "item4": {
+        "title": "The Direct Feedback Loop Function",
+        "text": "Voice your opinions and influence change with the Direct Feedback Loop Function. Share your thoughts directly with manufacturers, provide feedback on product sustainability, and contribute to the development of greener, more sustainable products. Your feedback matters, and EarthScore ensures it's heard."
+      }
+    },
+    "screen8": {
+      "title": "Meet the EarthScore Team",
+      "item1": {
+        "name": "Manuel Mattern",
+        "position": "Founder & CEO",
+        "deskPosition": "Visionary Management Team",
+        "text": "A proven visionary, Manuel Mattern initially made his mark by establishing a leading trust seal in the German e-commerce sector. He has since transitioned to a successful entrepreneurial career, demonstrating profound expertise in technology and product development at EarthScore."
+      },
+      "item2": {
+        "name": "Martin Börner",
+        "position": "Chief Sales Officer & General Manager",
+        "deskPosition": "Business Development Team",
+        "text": "Martin Börner brings a wealth of experience to EarthScore, with an impressive background in the German IT and telecom sectors. His previous roles include Deputy Managing Director at Samsung Electronics GmbH and General Manager and Sales Director at Motorola, underscoring his extensive industry expertise."
+      },
+      "item3": {
+        "name": "Prof. Agnieszka Gehringer",
+        "position": "Head of Board of Scientific Research",
+        "deskPosition": "Science Team",
+        "text": "Prof. Dr. Agnieszka Gehringer, a distinguished academic and researcher, pursued her Economics studies at Sapienza Università di Roma. With faculty positions at Georg-August University of Göttingen and Cologne University of Applied Sciences, she specializes in financial market integration and innovation economics. At EarthScore, she chairs the scientific advisory board, leveraging her expertise in sustainability measurement."
+      },
+      "item4": {
+        "name": "Igor Shtelmakh",
+        "position": "Chief Technology Officer",
+        "deskPosition": "AI & IT Development Team",
+        "text": "Originating from Vinnytsia, Ukraine, Igor Shtelmakh is a formidable technology leader with a PhD in Computer Science. As EarthScore's CTO, he oversees AI and software development initiatives, enriched by his previous experience as Chief Data Officer at Widr Pay in Paris. His role is crucial in driving technological innovation and software solutions across the company."
+      },
+      "item5": {
+        "name": "Claus Adams",
+        "position": "SENIOR ADVISOR",
+        "deskPosition": "Marketing/Sales",
+        "text": "With over 20 years in the advertising and marketing industries, Claus Adams specializes in sustainable practices and technological integration. He has held strategic leadership roles at leading agencies such as Geometry Global EMEA and Ogilvy. At EarthScore, Claus uses his expertise to refine brand strategies and drive market penetration, particularly in sustainable technology. His deep understanding of consumer behavior and digital trends significantly supports EarthScore’s mission to advance environmental responsibility through innovative solutions."
+      }
+    },
+    "screen9": {
+      "title": "Book a Demo!",
+      "subtitle": "Get in touch with our experts!",
+      "form": {
+        "placeholderName": "Enter your name",
+        "placeholderEmail": "Enter your email",
+        "name": "Name",
+        "email": "Email",
+        "message": "Your message here",
+        "btn": "Send message"
+      }
+    }
+  }
+}

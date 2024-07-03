@@ -1,22 +1,16 @@
 <template>
   <div class="space-y-6">
-    <a
-      class="hover:text-primary-A300 transition-all flex items-center space-x-2"
-      href="tel:+49(0)2238 4784075"
-    >
+    <a class="group flex items-center space-x-2" href="tel:+49(0)2238 4784075">
       <CallIcon class="text-2xl"></CallIcon>
-      <span class="text-xl"> +49 (0)2238 4784075</span></a
+      <span class="text-xl transition-all group-hover:font-medium"> +49 (0)2238 4784075</span></a
     >
-    <a
-      class="hover:text-primary-A300 transition-all flex items-center space-x-2"
-      href="mailto:info@earthscore.com"
-    >
+    <a class="group flex items-center space-x-2" href="mailto:info@earthscore.com">
       <PostIcon class="text-2xl"></PostIcon>
-      <span class="text-xl"> info@earthscore.com</span></a
+      <span class="text-xl transition-all group-hover:font-medium"> info@earthscore.com</span></a
     >
     <a
       target="_blank"
-      class="hover:text-primary-A300 hover:border-primary-A300 inline-block transition-al border-b border-0.5 border-black-N80"
+      class="hover:font-medium text-base hover:border-b-[1.5px] inline-block transition-all border-b border-0.5 border-black-N900"
       href="https://www.linkedin.com/company/whatsgreen-gmbh/"
     >
       LinkedIn

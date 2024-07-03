@@ -3,7 +3,7 @@
     <button class="prev2" @click="$emit('click-prev')" :disabled="isFirst">
       <LeftIcon
         :class="{ 'text-primary-A300': !isFirst, 'text-black-N90 cursor-not-allowed': isFirst }"
-        class="text-5xl mr-6"
+        class="text-[28px] md:text-5xl mr-6"
       ></LeftIcon>
     </button>
     <div class="col-span-3 grid grid-col-3 xl:grid-cols-5 gap-8 items-center justify-items-center">
@@ -22,7 +22,7 @@
     </div>
     <button class="next2" @click="$emit('click-next')" :disabled="isLast">
       <RightIcon
-        class="text-5xl ml-6"
+        class="text-[28px] md:text-5xl ml-6"
         :class="{ 'text-primary-A300': !isLast, 'text-black-N90 cursor-not-allowed': isLast }"
       ></RightIcon>
     </button>
