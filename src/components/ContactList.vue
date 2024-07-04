@@ -1,12 +1,12 @@
 <template>
   <div class="space-y-6">
-    <a class="group flex items-center space-x-2" href="tel:+49(0)2238 4784075">
+    <a class="flex items-center space-x-2" href="tel:+49(0)2238 4784075">
       <CallIcon class="text-2xl"></CallIcon>
-      <span class="text-xl transition-all group-hover:font-medium"> +49 (0)2238 4784075</span></a
+      <span class="text-xl transition-all hover:font-medium"> +49 (0)2238 4784075</span></a
     >
-    <a class="group flex items-center space-x-2" href="mailto:info@earthscore.com">
+    <a class="flex items-center space-x-2" href="mailto:info@earthscore.com">
       <PostIcon class="text-2xl"></PostIcon>
-      <span class="text-xl transition-all group-hover:font-medium"> info@earthscore.com</span></a
+      <span class="text-xl transition-all hover:font-medium"> info@earthscore.com</span></a
     >
     <a
       target="_blank"
