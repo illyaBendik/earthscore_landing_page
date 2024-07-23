@@ -14,7 +14,7 @@
             <div class="px-16">
               <div
                 :style="{ 'background-image': 'url(' + item.img + ')' }"
-                class="w-full h-[414px] bg-cover bg-center rounded-md"
+                class="w-full h-[414px] bg-contain bg-no-repeat bg-center rounded-md"
               ></div>
               <div>
                 <p class="pt-10">{{ item.text }}</p>
