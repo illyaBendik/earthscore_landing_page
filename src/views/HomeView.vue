@@ -90,11 +90,11 @@
     class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
   >
     <div class="text-white max-w-[838px]">
-      <p class="text-[32px] md:text-[40px]">
-        {{ t('homePage.screen4.title') }} <br />
-        {{ t('homePage.screen4.subtitle') }}
+      <p class="text-[32px] md:text-[40px] leading-[48px]">
+        {{ t('homePage.screen4.title') }}
       </p>
-      <p class="text-base font-medium uppercase">
+      <p class="text-[32px] md:text-[40px] leading-[48px]">{{ t('homePage.screen4.subtitle') }}</p>
+      <p class="text-base font-medium uppercase pt-4">
         {{ t('homePage.screen4.text') }}
       </p>
     </div>
@@ -107,11 +107,13 @@
     class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
   >
     <div class="text-white max-w-[838px]">
-      <p class="text-[32px] md:text-[40px]">
+      <p class="text-[32px] md:text-[40px] leading-[48px]">
         {{ t('homePage.screen6.title') }} <br />
+      </p>
+      <p class="text-[32px] md:text-[40px] leading-[48px]">
         {{ t('homePage.screen6.subtitle') }}
       </p>
-      <p class="text-base font-medium uppercase">
+      <p class="text-base font-medium uppercase pt-4">
         {{ t('homePage.screen6.text') }}
       </p>
     </div>

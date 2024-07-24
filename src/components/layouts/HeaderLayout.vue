@@ -2,7 +2,7 @@
   <header
     id="header"
     class="fixed top-0 z-50 w-full h-[90px] px-4 transition-all ease-out duration-500 flex items-center justify-between"
-    :class="{ 'bg-white': isScrolled }"
+    :class="{ 'bg-white shadow-lg': isScrolled }"
   >
     <div>
       <RouterLink :to="{ name: 'home' }" class="flex items-center text-lg">

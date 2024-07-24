@@ -1,44 +1,46 @@
 <template>
-  <div
-    class="border z-50 fixed w-full md:w-96 right-0 h-screen bg-white slide-animation scrollbar overflow-y-auto"
-  >
-    <div class="pl-8 pr-4 pt-5">
-      <div class="flex justify-end space-x-3">
-        <button
-          @click="setLocale"
-          class="p-2 text-2xl flex items-center text-black-N100 space-x-2 transition-all hover:text-black-N900 group"
-        >
-          <LangIcon></LangIcon>
-          <span class="block text-lg uppercase transition-all group-hover:font-medium">{{
-            locale
-          }}</span>
-        </button>
-        <button
-          @click="$emit('close')"
-          class="border border-black-N900 rounded-md px-3 py-1.5 text-2xl"
-        >
-          <CloseIcon></CloseIcon>
-        </button>
-      </div>
-      <ul class="space-y-8 mb-20 mt-5">
-        <li
-          v-for="(contentItem, index) in list"
-          :key="index"
-          @click.prevent="onClick(contentItem.id)"
-        >
-          <a
-            class="text-xl text-light transition-all hover:font-medium"
-            :href="`#${contentItem.id}`"
+  <div :class="{ 'bg-black-N900/55 w-full z-[60] absolute left-0 top-0 h-full': isOpen }">
+    <div
+      class="border z-50 fixed w-full md:w-96 right-0 h-screen bg-white slide-animation scrollbar overflow-y-auto"
+    >
+      <div class="pl-8 pr-4 pt-5">
+        <div class="flex justify-end space-x-3">
+          <button
+            @click="setLocale"
+            class="p-2 text-2xl flex items-center text-black-N100 space-x-2 transition-all hover:text-black-N900 group"
           >
-            {{ `0${index + 1}` }} {{ contentItem.name }}
-          </a>
-        </li>
-      </ul>
-    </div>
-    <hr class="bg-black-N900 h-0.5" />
-    <div class="px-8 pb-3">
-      <span class="block text-3xl py-16">{{ t('sidebar.contact') }}:</span>
-      <ContactList></ContactList>
+            <LangIcon></LangIcon>
+            <span class="block text-lg uppercase transition-all group-hover:font-medium">{{
+              swithcLocaleTo
+            }}</span>
+          </button>
+          <button
+            @click="$emit('close')"
+            class="border border-black-N900 rounded-md px-3 py-1.5 text-2xl"
+          >
+            <CloseIcon></CloseIcon>
+          </button>
+        </div>
+        <ul class="space-y-8 mb-20 mt-5">
+          <li
+            v-for="(contentItem, index) in list"
+            :key="index"
+            @click.prevent="onClick(contentItem.id)"
+          >
+            <a
+              class="text-xl text-light transition-all hover:font-medium"
+              :href="`#${contentItem.id}`"
+            >
+              {{ `0${index + 1}` }} {{ contentItem.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr class="bg-black-N900 h-0.5" />
+      <div class="px-8 pb-3">
+        <span class="block text-3xl py-16">{{ t('sidebar.contact') }}:</span>
+        <ContactList></ContactList>
+      </div>
     </div>
   </div>
 </template>
@@ -54,6 +56,12 @@ const EN_LOCALE = 'en'
 const DE_LOCALE = 'de'
 const { locale, t } = useI18n({ useScope: 'global' })
 
+defineProps<{
+  isOpen: boolean
+}>()
+
+const emit = defineEmits(['close'])
+
 const list = computed(() => [
   { name: t('sidebar.list.item1'), id: 'mission' },
   { name: t('sidebar.list.item2'), id: 'our-solutions' },
@@ -63,13 +71,10 @@ const list = computed(() => [
   { name: t('sidebar.list.item6'), id: 'contact-form' }
 ])
 
-defineProps<{
-  isOpen: boolean
-}>()
-const emit = defineEmits(['close'])
+const swithcLocaleTo = computed(() => (locale.value == EN_LOCALE ? DE_LOCALE : EN_LOCALE))
 
 const setLocale = () => {
-  locale.value = locale.value == EN_LOCALE ? DE_LOCALE : EN_LOCALE
+  locale.value = swithcLocaleTo.value
   localStorage.setItem('lang', locale.value)
 }
 
