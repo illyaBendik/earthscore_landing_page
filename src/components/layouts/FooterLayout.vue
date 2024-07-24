@@ -13,13 +13,13 @@
           :to="{ name: 'impressum' }"
           :class="{ 'text-primary-A300 font-medium': route.name === 'impressum' }"
           class="text-base transition-all hover:font-medium"
-          >Imprint
+          >{{ t('footer.link1') }}
         </RouterLink>
         <RouterLink
           :to="{ name: 'privacy-policy' }"
           :class="{ 'text-primary-A300 font-medium': route.name === 'privacy-policy' }"
           class="text-base transition-all hover:font-medium"
-          >Privacy Policy</RouterLink
+          >{{ t('footer.link2') }}</RouterLink
         >
       </div>
     </div>
@@ -44,6 +44,8 @@ import FooterImg1 from '@/assets/img/footer-1.png'
 import FooterImg2 from '@/assets/img/footer-2.png'
 import ImgLogo from '@/assets/img/logo.svg'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n({ useScope: 'global' })
 const route = useRoute()
 </script>

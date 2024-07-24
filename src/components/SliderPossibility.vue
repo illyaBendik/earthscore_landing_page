@@ -15,7 +15,7 @@
             <div class="w-full col-span-3 relative">
               <div
                 :style="{ 'background-image': 'url(' + item.img + ')' }"
-                class="hidden md:block h-[377px] lg:h-[471px] bg-cover bg-center rounded-md"
+                class="hidden md:block h-[377px] lg:h-[390px] bg-cover bg-center rounded-md"
               ></div>
               <div
                 :style="{ 'background-image': 'url(' + item.imgMob + ')' }"
@@ -39,7 +39,7 @@
               </div>
               <p
                 :class="{ invisible: !isActive }"
-                class="text-[18px] font-medium lg:my-7 mb-3 mt-16 lg:mt-12 px-4 lg:px-0"
+                class="text-[32px] font-light lg:my-7 mb-3 mt-16 lg:mt-12 px-4 lg:px-0"
               >
                 {{ item.title }}
               </p>
@@ -70,7 +70,7 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
 
-const list = [
+const list = computed(() => [
   {
     title: t('homePage.screen7.item1.title'),
     text: t('homePage.screen7.item1.text'),
@@ -101,7 +101,7 @@ const list = [
     img: SliderImg1,
     imgMob: SliderImgMob1
   }
-]
+])
 
 const swiperInstance = ref()
 const activeIndex = ref(0)

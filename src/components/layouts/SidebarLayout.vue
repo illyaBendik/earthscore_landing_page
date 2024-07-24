@@ -1,5 +1,9 @@
 <template>
-  <div :class="{ 'bg-black-N900/55 w-full z-[60] absolute left-0 top-0 h-full': isOpen }">
+  <div
+    @click="($event) => close($event)"
+    id="sidebar"
+    :class="{ 'bg-black-N900/55 w-full z-[60] absolute left-0 top-0 h-full': isOpen }"
+  >
     <div
       class="border z-50 fixed w-full md:w-96 right-0 h-screen bg-white slide-animation scrollbar overflow-y-auto"
     >
@@ -81,6 +85,12 @@ const setLocale = () => {
 const onClick = (id: string) => {
   emit('close')
   toBlock(id, 'start')
+}
+
+const close = (e: any) => {
+  if (e.target.id === 'sidebar') {
+    emit('close')
+  }
 }
 </script>
 <style scoped>
