@@ -31,7 +31,7 @@
               class="text-xl text-light transition-all hover:font-medium"
               :href="`#${contentItem.id}`"
             >
-              {{ `0${index + 1}` }} {{ contentItem.name }}
+              {{ contentItem.name }}
             </a>
           </li>
         </ul>
