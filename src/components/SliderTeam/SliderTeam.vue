@@ -47,6 +47,7 @@ import ImgUser2 from '@/assets/img/user-2.png'
 import ImgUser3 from '@/assets/img/user-3.png'
 import ImgUser4 from '@/assets/img/user-4.png'
 import ImgUser5 from '@/assets/img/user-5.png'
+import ImgUser6 from '@/assets/img/user-6.png'
 
 import { useI18n } from 'vue-i18n'
 
@@ -87,6 +88,13 @@ const users = computed(() => [
     deskPosition: t('homePage.screen8.item5.deskPosition'),
     img: ImgUser5,
     text: t('homePage.screen8.item5.text')
+  },
+  {
+    name: t('homePage.screen8.item6.name'),
+    position: t('homePage.screen8.item6.position'),
+    deskPosition: t('homePage.screen8.item6.deskPosition'),
+    img: ImgUser6,
+    text: t('homePage.screen8.item6.text')
   }
 ])
 
@@ -135,7 +143,7 @@ const slidesPerView = computed(() => {
     return 3
   }
   if (isLgAndMore.value) {
-    return 5
+    return 6
   }
   return 2
 })
