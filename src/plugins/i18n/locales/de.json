@@ -1,6 +1,7 @@
 {
   "header": {
-    "btn": "Gratis-Demo anfordern"
+    "btn": "Gratis-Demo anfordern",
+    "btnBack": "Zurück"
   },
   "footer": {
     "link1": "Impressum",
@@ -128,8 +129,8 @@
       },
       "item6": {
         "name": "Gottfried Werner",
-        "position": "Chief Financial Officer",
-        "deskPosition": "Financial expert & partner",
+        "position": "Financial Expert",
+        "deskPosition": "Partner",
         "text": "Gottfried ist ein Experte mit über 20 Jahren Erfahrung in Geschäftsentwicklung, Management, B2B-Vertrieb und strategischen Partnerschaften. Sein Erfolg hat ihm ein breites Netzwerk in Politik und Wirtschaft eingebracht. Er hat große Medien-, Werbe- und Technologieunternehmen beraten und war Geschäftsführer eines führenden Technologieunternehmens im Automobilsektor. Zuvor war er Vorstandsmitglied eines Schweizer Leasingunternehmens und arbeitete bei einem deutschen Projektentwicklungsunternehmen für institutionelle Investoren."
       }
     },

@@ -1,8 +1,12 @@
 <template>
   <header
     id="header"
-    class="fixed top-0 z-50 w-full h-[90px] px-4 transition-all ease-out duration-500 flex items-center justify-between"
-    :class="{ 'bg-white shadow-lg': isScrolled }"
+    class="fixed top-0 z-50 w-full h-[90px] px-4 flex items-center justify-between"
+    :class="{
+      'bg-white shadow-lg transition-all ease-out duration-500':
+        isScrolled && useRoute().name === 'home',
+      'bg-white shadow-lg': useRoute().name !== 'home'
+    }"
   >
     <div>
       <RouterLink :to="{ name: 'home' }" class="flex items-center text-lg">
@@ -26,6 +30,16 @@
       </button>
       <slot></slot>
     </div>
+    <RouterLink
+      :to="{ name: 'home' }"
+      v-if="useRoute().name !== 'home'"
+      class="bg-primary-A300 text-base border flex items-center rounded-lg px-3 py-1.5 text-white mt-1.5"
+      type="button"
+      @click="toBlock('contact-form', 'start')"
+    >
+      <BackArrow></BackArrow>
+      <span class="pl-1"> {{ t('header.btnBack') }}</span>
+    </RouterLink>
   </header>
 </template>
 <script setup lang="ts">
@@ -33,6 +47,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { toBlock } from '@/utils/toBlock'
 import ImgLogo from '@/assets/img/logo.svg'
+import BackArrow from '@/components/icons/BackArrow.vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
