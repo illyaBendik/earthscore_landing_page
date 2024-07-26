@@ -9,22 +9,24 @@
     }"
   >
     <div>
-      <RouterLink :to="{ name: 'home' }" class="flex items-center text-lg">
-        <img class="w-10 h-10" :src="ImgLogo" alt="Logo" />
-        <span class="pl-2 font-medium">EarhtScore</span>
+      <RouterLink
+        v-if="useRoute().name === 'home' ? isScrolled : true"
+        :to="{ name: 'home' }"
+        class="flex items-center text-lg"
+      >
+        <img class="h-[38px] w-[138px]" :src="ImgLogo" alt="Logo" />
       </RouterLink>
     </div>
     <div v-if="useRoute().name === 'home'" class="flex items-center gap-3">
       <button
         :class="{
-          ' text-white bg-primary-A300 hover:bg-white   hover:border-black-N900 hover:text-black-N900':
-            isScrolled,
-          ' border-black-N900 text-black-N900 hover:text-white hover:bg-primary-A300 hover:border-transparent':
-            !isScrolled
+          '  text-black-N900 hover:font-medium ': !isScrolled,
+          '  bg-primary-A300 border-transparent text-white': isScrolled,
+          'bg-primary-A600 text-white border-transparent font-medium': isClicked
         }"
         type="button"
-        @click="toBlock('contact-form', 'start')"
-        class="text-base border rounded-lg px-3 py-1.5 hidden md:block transition-all"
+        @click="onClick"
+        class="text-base border-black-N900 border rounded-lg px-3 py-1.5 hidden md:block transition-all w-[195px] hover:font-medium"
       >
         {{ t('header.btn') }}
       </button>
@@ -35,7 +37,6 @@
       v-if="useRoute().name !== 'home'"
       class="bg-primary-A300 text-base border flex items-center rounded-lg px-3 py-1.5 text-white mt-1.5"
       type="button"
-      @click="toBlock('contact-form', 'start')"
     >
       <BackArrow></BackArrow>
       <span class="pl-1"> {{ t('header.btnBack') }}</span>
@@ -45,14 +46,15 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { toBlock } from '@/utils/toBlock'
-import ImgLogo from '@/assets/img/logo.svg'
+import { toBlockWithPromise } from '@/utils/toBlock'
+import ImgLogo from '@/assets/img/header-logo.svg'
 import BackArrow from '@/components/icons/BackArrow.vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
 
 const isScrolled = ref(false)
+const isClicked = ref(false)
 
 const handleScroll = () => {
   if (window.scrollY > 250) {
@@ -61,13 +63,34 @@ const handleScroll = () => {
     isScrolled.value = false
   }
 }
+const handleScroll2 = () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          isClicked.value = false
+        }
+      })
+    },
+    { threshold: 0.1 }
+  )
+
+  observer.observe(document.getElementById('viewport-contact-form') as HTMLElement)
+}
+
+const onClick = async () => {
+  await toBlockWithPromise('contact-form', 'start')
+  isClicked.value = true
+}
 
 onMounted(() => {
   handleScroll()
   window.addEventListener('scroll', handleScroll)
+  document.addEventListener('scroll', handleScroll2)
 })
 
 onUnmounted(() => {
+  document.removeEventListener('scroll', handleScroll2)
   window.removeEventListener('scroll', handleScroll)
 })
 </script>

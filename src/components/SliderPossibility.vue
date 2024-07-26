@@ -1,12 +1,12 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-4 z-20 py-12 md:py-16">
-    <h2 class="text-[32px] mb-8 px-3 xl:px-10">{{ t('homePage.screen7.title') }}</h2>
+    <h2 class="text-[32px] mb-8 px-3 xl:px-10 leading-10">{{ t('homePage.screen7.title') }}</h2>
     <div class="col-span-3">
       <swiper
         id="slider-possibility"
         @init="init"
         :spaceBetween="30"
-        :allow-touch-move="false"
+        :allowTouchMove="isMobileScreen"
         :slidesPerView="isSmallScreen ? 1 : 1.1"
         :speed="500"
       >
@@ -21,16 +21,16 @@
                 :style="{ 'background-image': 'url(' + item.imgMob + ')' }"
                 class="h-[377px] bg-contain bg-no-repeat bg-center rounded-md md:hidden"
               ></div>
-              <div v-if="i === activeIndex" class="fixed right-[10px] mt-5 space-x-5">
+              <div v-if="swiperInstance" class="fixed right-[10px] mt-5 space-x-5">
                 <span v-for="(_, btnIndex) in list" :key="btnIndex">
                   <button
                     @click="onClikcBtn(btnIndex)"
                     v-if="btnIndex !== list.length - 1"
                     class="text-xl"
                     :class="{
-                      'text-primary-A300 font-medium': activeIndex === btnIndex,
+                      'text-primary-A300 font-medium': swiperInstance.activeIndex === btnIndex,
                       'text-black-N70 transition-all hover:text-black-N900':
-                        activeIndex !== btnIndex
+                        swiperInstance.activeIndex !== btnIndex
                     }"
                   >
                     0{{ btnIndex + 1 }}
@@ -39,7 +39,7 @@
               </div>
               <p
                 :class="{ invisible: !isActive }"
-                class="text-[32px] font-light lg:my-7 mb-3 mt-16 lg:mt-12 px-4 lg:px-0"
+                class="text-[32px] font-light lg:my-4 mb-3 mt-16 lg:mt-12 px-4 lg:px-0"
               >
                 {{ item.title }}
               </p>
@@ -108,6 +108,7 @@ const activeIndex = ref(0)
 const screenWidth = ref(window.innerWidth)
 
 const isSmallScreen = computed(() => screenWidth.value < 1024)
+const isMobileScreen = computed(() => screenWidth.value < 640)
 
 const init = (e: any) => {
   swiperInstance.value = e

@@ -11,10 +11,10 @@
         <div class="flex justify-end space-x-3">
           <button
             @click="setLocale"
-            class="p-2 text-2xl flex items-center text-black-N100 space-x-2 transition-all hover:text-black-N900 group"
+            class="p-2 text-2xl flex items-center text-black-N100 space-x-2 transition-all md:hover:text-black-N900 group"
           >
             <LangIcon></LangIcon>
-            <span class="block text-lg uppercase transition-all group-hover:font-medium">{{
+            <span class="block text-lg uppercase transition-all md:group-hover:font-medium">{{
               swithcLocaleTo
             }}</span>
           </button>

@@ -14,7 +14,8 @@ export default {
           A200: '#2b91ff',
           A300: '#007aff',
           A400: '#0055b3',
-          A500: '#004a9c'
+          A500: '#004a9c',
+          A600: '#006BE1'
         },
         black: {
           N10: '#fafafa',

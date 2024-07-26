@@ -4,15 +4,17 @@
     :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
     class="w-full min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
   >
-    <span class="inline-block text-center"><img :src="ImgLogo" alt="Logo" /></span>
-    <h1 class="text-center">
-      <span class="text-[58px] font-bold tracking-wider">EarthScore</span> <br />
-      <span class="uppercase font-bold">{{ t('homePage.screen1.subtitle') }}</span>
-    </h1>
+    <span class="inline-block text-center"
+      ><img class="md:h-[272px] h-[165px] w-[215px] md:w-[373px]" :src="ImgLogo" alt="Logo"
+    /></span>
+    <span
+      class="uppercase text-[11.1px] md:text-[19.3px] text-center font-bold w-[215px] md:w-[373px] whitespace-nowrap"
+      >{{ t('homePage.screen1.subtitle') }}</span
+    >
     <button
       type="button"
       @click="toBlock('contact-form', 'start')"
-      class="rounded-md transition-all bg-primary-A300 hover:bg-white hover:text-black-N900 text-white mt-12 px-4 py-2"
+      class="rounded-md transition-all bg-primary-A300 focus:bg-primary-A600 text-white mt-12 px-4 py-2"
     >
       {{ t('homePage.screen1.btn') }}
     </button>
@@ -89,12 +91,16 @@
     :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
     class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
   >
-    <div class="text-white max-w-[838px]">
-      <p class="text-[32px] md:text-[40px] leading-[48px]">
+    <div class="max-w-[930px]">
+      <p class="text-white text-[32px] md:text-[40px] leading-[48px]">
         {{ t('homePage.screen4.title') }}
       </p>
-      <p class="text-[32px] md:text-[40px] leading-[48px]">{{ t('homePage.screen4.subtitle') }}</p>
-      <p class="text-base font-medium uppercase pt-4">
+      <p class="text-white text-[32px] md:text-[40px] leading-[48px]">
+        {{ t('homePage.screen4.subtitle') }}
+      </p>
+    </div>
+    <div class="max-w-[838px]">
+      <p class="text-base text-white font-medium uppercase pt-4">
         {{ t('homePage.screen4.text') }}
       </p>
     </div>
@@ -124,7 +130,7 @@
   <h3 class="text-[32px] md:text-[32px] px-6 py-12">{{ t('homePage.screen8.title') }}</h3>
   <SliderTeam></SliderTeam>
   <!-- NINE  BLOCK -->
-  <div class="client-block grid md:grid-cols-2">
+  <div class="client-block grid md:grid-cols-2" id="viewport-contact-form">
     <div class="flex flex-col">
       <h2 class="text-[32px]">{{ t('homePage.screen9.title') }}</h2>
       <p class="text-xl mt-5">{{ t('homePage.screen9.subtitle') }}</p>
@@ -142,7 +148,7 @@ import { toBlock } from '@/utils/toBlock'
 import BgImg1 from '@/assets/img/full-screen-1.png'
 import BgImg2 from '@/assets/img/full-screen-2.png'
 import BgImg3 from '@/assets/img/full-screen-3.png'
-import ImgLogo from '@/assets/img/logo.svg'
+import ImgLogo from '@/assets/img/main-logo.svg'
 import DownIcon from '@/components/icons/DownIcon.vue'
 import ContactForm from '@/components/ContactForm.vue'
 import ContactList from '@/components/ContactList.vue'
