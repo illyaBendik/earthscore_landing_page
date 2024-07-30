@@ -14,7 +14,7 @@
     <button
       type="button"
       @click="toBlock('contact-form', 'start')"
-      class="rounded-md transition-all bg-primary-A300 focus:bg-primary-A600 text-white mt-12 px-4 py-2"
+      class="rounded-md transition-all bg-primary-A300 active:bg-primary-A600 hover:font-medium text-white mt-12 px-4 py-2"
     >
       {{ t('homePage.screen1.btn') }}
     </button>
@@ -45,7 +45,9 @@
       class="px-6 pt-12 md:pt-28 pb-[72px] md:px-16 bg-white flex items-start relative border-y border-x-0 md:border-y-0 md:border-x border-gray-950"
     >
       <div>
-        <p class="text-[32px] md:text-[40px] mb-5">{{ t('homePage.screen3.block2.title') }}</p>
+        <p class="text-[32px] md:text-[40px] mb-[12px] mt-[35px]">
+          {{ t('homePage.screen3.block2.title') }}
+        </p>
         <p class="text-base">
           {{ t('homePage.screen3.block2.text') }}
         </p>
@@ -66,7 +68,9 @@
     </div>
     <div class="px-6 pt-12 md:pt-28 pb-[72px] md:px-16 bg-white flex items-start relative">
       <div>
-        <p class="text-[32px] md:text-[40px] mb-5">{{ t('homePage.screen3.block3.title') }}</p>
+        <p class="text-[32px] md:text-[40px] mb-[12px] mt-[35px]">
+          {{ t('homePage.screen3.block3.title') }}
+        </p>
         <p class="text-base">
           {{ t('homePage.screen3.block3.text') }}
         </p>
@@ -127,7 +131,9 @@
   <!-- SEVEN BLOCK -->
   <SliderPossibility></SliderPossibility>
   <!-- EIGHT  BLOCK -->
-  <h3 class="text-[32px] md:text-[32px] px-6 py-12">{{ t('homePage.screen8.title') }}</h3>
+  <h3 class="text-[32px] md:text-[40px] leading-[48px] px-6 md:px-16 py-12">
+    {{ t('homePage.screen8.title') }}
+  </h3>
   <SliderTeam></SliderTeam>
   <!-- NINE  BLOCK -->
   <div class="client-block grid md:grid-cols-2" id="viewport-contact-form">

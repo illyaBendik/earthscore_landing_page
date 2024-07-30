@@ -1,6 +1,8 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-4 z-20 py-12 md:py-16">
-    <h2 class="text-[32px] mb-8 px-3 xl:px-10 leading-10">{{ t('homePage.screen7.title') }}</h2>
+    <h2 class="text-[32px] md:text-[40px] leading-[48px] mb-8 pl-6 md:pl-16">
+      {{ t('homePage.screen7.title') }}
+    </h2>
     <div class="col-span-3">
       <swiper
         id="slider-possibility"

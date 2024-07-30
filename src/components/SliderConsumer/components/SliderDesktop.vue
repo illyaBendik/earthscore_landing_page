@@ -14,7 +14,13 @@
             <div class="px-12">
               <div
                 :style="{ 'background-image': 'url(' + item.img + ')' }"
-                class="w-full h-[444px] bg-cover bg-no-repeat bg-center rounded-md"
+                class="w-full h-[435px] bg-no-repeat bg-center rounded-md"
+                :class="{
+                  'bg-contain':
+                    swiperInstanceMain && swiperInstanceMain.activeIndex === contentList.length - 1,
+                  'bg-cover':
+                    swiperInstanceMain && swiperInstanceMain.activeIndex !== contentList.length - 1
+                }"
               ></div>
               <div>
                 <p class="pt-4 text-base">{{ item.text }}</p>
