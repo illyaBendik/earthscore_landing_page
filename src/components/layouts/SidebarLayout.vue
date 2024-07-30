@@ -7,8 +7,8 @@
     <div
       class="border z-50 fixed w-full md:w-96 right-0 h-screen bg-white slide-animation scrollbar overflow-y-auto"
     >
-      <div class="pl-8 pr-4 pt-5">
-        <div class="flex justify-end space-x-3">
+      <div class="pl-8 pr-6 md:pr-16 pt-5">
+        <div class="flex justify-end items-center space-x-3">
           <button
             @click="setLocale"
             class="p-2 text-2xl flex items-center text-black-N100 space-x-2 transition-all md:hover:text-black-N900 group"
@@ -20,7 +20,7 @@
           </button>
           <button
             @click="$emit('close')"
-            class="border border-black-N900 rounded-md px-3 py-1.5 text-2xl"
+            class="border border-black-N900 rounded-md px-1 py-1 text-lg"
           >
             <CloseIcon></CloseIcon>
           </button>

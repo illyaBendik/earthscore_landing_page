@@ -11,13 +11,13 @@
       >
         <swiper-slide v-for="(item, i) in contentList" :key="i">
           <div class="relative flex justify-start items-center flex-col h-full">
-            <div class="px-16">
+            <div class="px-12">
               <div
                 :style="{ 'background-image': 'url(' + item.img + ')' }"
                 class="w-full h-[444px] bg-cover bg-no-repeat bg-center rounded-md"
               ></div>
               <div>
-                <p class="pt-8">{{ item.text }}</p>
+                <p class="pt-4 text-base">{{ item.text }}</p>
               </div>
             </div>
           </div>

@@ -3,9 +3,9 @@
     <HeaderLayout>
       <button
         @click="toggleSidebar"
-        class="text-lg border border-black-N900 text-black-N900 rounded-lg px-3 py-1.5"
+        class="text-lg border border-black-N900 text-black-N900 rounded-lg px-1 py-1"
       >
-        <MenuIcon class="text-[28px]"></MenuIcon>
+        <MenuIcon></MenuIcon>
       </button>
     </HeaderLayout>
     <SidebarLayout :is-open="showSideBar" @close="toggleSidebar"></SidebarLayout>

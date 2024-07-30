@@ -34,7 +34,7 @@
       <span class="text-white text-base md:text-xl uppercase">{{
         t('homePage.screen3.block1.title')
       }}</span>
-      <p class="text-white text-[32px] md:text-[40px] my-5">
+      <p class="text-white text-[32px] md:text-[40px] my-5 leading-[44px]">
         {{ t('homePage.screen3.block1.subtitle') }}:
       </p>
       <p class="text-base text-white">

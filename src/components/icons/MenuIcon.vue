@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" width="0.85em" height="0.8572em" viewBox="0 0 24 24">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1.65em" height="1.55em" viewBox="0 0 24 24">
     <rect width="24" height="24" fill="none" />
     <path
       fill="none"
