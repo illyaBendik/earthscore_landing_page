@@ -1,23 +1,25 @@
 <template>
   <!-- FIRST BLOCK -->
-  <div
-    :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
-    class="w-full min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
-  >
-    <span class="inline-block text-center"
-      ><img class="md:h-[272px] h-[165px] w-[215px] md:w-[373px]" :src="ImgLogo" alt="Logo"
-    /></span>
-    <span
-      class="uppercase text-[11.1px] md:text-[19.3px] text-center font-bold w-[215px] md:w-[373px] whitespace-nowrap"
-      >{{ t('homePage.screen1.subtitle') }}</span
+  <div class="box mx-auto">
+    <div
+      :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
+      class="w-full min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
     >
-    <button
-      type="button"
-      @click="toBlock('contact-form', 'start')"
-      class="rounded-md transition-all bg-primary-A300 active:bg-primary-A600 hover:font-medium text-white mt-12 px-4 py-2"
-    >
-      {{ t('homePage.screen1.btn') }}
-    </button>
+      <span class="inline-block text-center"
+        ><img class="md:h-[272px] h-[165px] w-[215px] md:w-[373px]" :src="ImgLogo" alt="Logo"
+      /></span>
+      <span
+        class="uppercase text-[11.1px] md:text-[19.3px] text-center font-bold w-[215px] md:w-[373px] whitespace-nowrap"
+        >{{ t('homePage.screen1.subtitle') }}</span
+      >
+      <button
+        type="button"
+        @click="toBlock('contact-form', 'start')"
+        class="rounded-md transition-all bg-primary-A300 active:bg-primary-A600 hover:font-medium text-white mt-12 px-4 py-2"
+      >
+        {{ t('homePage.screen1.btn') }}
+      </button>
+    </div>
   </div>
   <!-- SECOND BLOCK -->
   <div class="px-6 pt-12 pb-[72px] md:pt-32 md:pb-[226px] md:px-16" id="mission">
@@ -99,11 +101,11 @@
     </div>
   </div>
   <!-- FOUR BLOCK -->
-  <div
-    :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
-    class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
-  >
-    <div class="box">
+  <div class="box mx-auto">
+    <div
+      :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
+      class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
+    >
       <div class="max-w-[930px]">
         <p class="text-white headline">
           {{ t('homePage.screen4.title') }}
@@ -124,19 +126,21 @@
     <SliderConsumer></SliderConsumer>
   </div>
   <!-- SIX BLOCK -->
-  <div
-    :style="{ 'background-image': 'url(' + BgImg3 + ')' }"
-    class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
-  >
-    <div class="box">
-      <div class="text-white max-w-[838px]">
-        <p class="headline">{{ t('homePage.screen6.title') }} <br /></p>
-        <p class="headline">
-          {{ t('homePage.screen6.subtitle') }}
-        </p>
-        <p class="text-base font-medium uppercase pt-4">
-          {{ t('homePage.screen6.text') }}
-        </p>
+  <div class="box mx-auto">
+    <div
+      :style="{ 'background-image': 'url(' + BgImg3 + ')' }"
+      class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
+    >
+      <div class="box">
+        <div class="text-white max-w-[838px]">
+          <p class="headline">{{ t('homePage.screen6.title') }} <br /></p>
+          <p class="headline">
+            {{ t('homePage.screen6.subtitle') }}
+          </p>
+          <p class="text-base font-medium uppercase pt-4">
+            {{ t('homePage.screen6.text') }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
