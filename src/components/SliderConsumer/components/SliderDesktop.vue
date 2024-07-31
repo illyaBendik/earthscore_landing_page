@@ -32,7 +32,7 @@
     </div>
     <div class="col-span-2 rounded-md relative">
       <div class="absolute left-[-6px] h-full w-[5.5px] bg-black-N40 rounded-md"></div>
-      <h3 class="text-[40px] absolute left-0 pl-[64px] leading-[44px]">
+      <h3 class="absolute left-0 pl-[64px] headline">
         {{ t('homePage.screen5.title') }}
       </h3>
       <swiper

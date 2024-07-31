@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-4 z-20 py-12 md:py-16">
-    <h2 class="text-[32px] md:text-[40px] leading-[48px] mb-8 pl-6 md:pl-16">
+    <h2 class="headline mb-8 pl-6 md:pl-16">
       {{ t('homePage.screen7.title') }}
     </h2>
     <div class="col-span-3">
@@ -8,6 +8,7 @@
         id="slider-possibility"
         @init="init"
         :spaceBetween="30"
+        :key="Number(isMobileScreen)"
         :allowTouchMove="isMobileScreen"
         :slidesPerView="isSmallScreen ? 1 : 1.1"
         :speed="500"
@@ -27,7 +28,7 @@
                 <span v-for="(_, btnIndex) in list" :key="btnIndex">
                   <button
                     @click="onClikcBtn(btnIndex)"
-                    v-if="btnIndex !== list.length - 1"
+                    v-if="isMobileScreen ? btnIndex !== list.length : btnIndex !== list.length - 1"
                     class="text-xl"
                     :class="{
                       'text-primary-A300 font-medium': swiperInstance.activeIndex === btnIndex,
@@ -72,38 +73,45 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
 
-const list = computed(() => [
-  {
-    title: t('homePage.screen7.item1.title'),
-    text: t('homePage.screen7.item1.text'),
-    img: SliderImg1,
-    imgMob: SliderImgMob1
-  },
-  {
-    title: t('homePage.screen7.item2.title'),
-    text: t('homePage.screen7.item2.text'),
-    img: SliderImg2,
-    imgMob: SliderImgMob2
-  },
-  {
-    title: t('homePage.screen7.item3.title'),
-    text: t('homePage.screen7.item3.text'),
-    img: SliderImg3,
-    imgMob: SliderImgMob3
-  },
-  {
-    title: t('homePage.screen7.item4.title'),
-    text: t('homePage.screen7.item4.text'),
-    img: SliderImg4,
-    imgMob: SliderImgMob4
-  },
-  {
-    title: t('homePage.screen7.item1.title'),
-    text: t('homePage.screen7.item1.text'),
-    img: SliderImg1,
-    imgMob: SliderImgMob1
+const list = computed(() => {
+  const items = [
+    {
+      title: t('homePage.screen7.item1.title'),
+      text: t('homePage.screen7.item1.text'),
+      img: SliderImg1,
+      imgMob: SliderImgMob1
+    },
+    {
+      title: t('homePage.screen7.item2.title'),
+      text: t('homePage.screen7.item2.text'),
+      img: SliderImg2,
+      imgMob: SliderImgMob2
+    },
+    {
+      title: t('homePage.screen7.item3.title'),
+      text: t('homePage.screen7.item3.text'),
+      img: SliderImg3,
+      imgMob: SliderImgMob3
+    },
+    {
+      title: t('homePage.screen7.item4.title'),
+      text: t('homePage.screen7.item4.text'),
+      img: SliderImg4,
+      imgMob: SliderImgMob4
+    }
+  ]
+
+  if (!isMobileScreen.value) {
+    items.push({
+      title: t('homePage.screen7.item1.title'),
+      text: t('homePage.screen7.item1.text'),
+      img: SliderImg1,
+      imgMob: SliderImgMob1
+    })
   }
-])
+
+  return items
+})
 
 const swiperInstance = ref()
 const activeIndex = ref(0)

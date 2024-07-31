@@ -1,6 +1,12 @@
 <template>
   <div id="slider-team">
-    <swiper :allow-touch-move="false" :slides-per-view="1" @init="onSwiperMain">
+    <swiper
+      :key="Number(isMobileScreen)"
+      :allowTouchMove="isMobileScreen"
+      :slides-per-view="1"
+      @init="onSwiperMain"
+      @slideChange="onSlideChange"
+    >
       <swiper-slide v-for="(user, i) in users" :key="i" v-slot="{ isActive }">
         <SliderItem
           :isActive="isActive"
@@ -12,7 +18,7 @@
         ></SliderItem>
       </swiper-slide>
     </swiper>
-    <div class="bg-[#E6F2FF80] w-full py-5 lg:py-10 mt-3 lg:mt-10">
+    <div class="bg-[#E6F2FF80] w-full py-5 lg:py-10 mt-10">
       <swiper
         id="slider-team-pagination"
         :slides-per-view="slidesPerView"
@@ -117,6 +123,12 @@ const onClikcBtn = (index: number) => {
   slideIndex.value = index
 }
 
+const onSlideChange = (e: { activeIndex: number }) => {
+  const index = e.activeIndex
+  swiperInstancePagination.value.slideTo(index)
+  slideIndex.value = index
+}
+
 const next = () => {
   if (swiperInstanceMain.value.activeIndex !== users.value.length - 1) {
     const index = swiperInstanceMain.value.activeIndex + 1
@@ -137,6 +149,7 @@ const prev = () => {
 
 const isLgAndMore = computed(() => screenWidth.value > 1024)
 const isMd = computed(() => screenWidth.value > 768 && screenWidth.value < 1024)
+const isMobileScreen = computed(() => screenWidth.value < 640)
 
 const slidesPerView = computed(() => {
   if (isMd.value) {

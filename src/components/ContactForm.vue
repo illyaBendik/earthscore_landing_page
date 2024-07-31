@@ -1,6 +1,6 @@
 <template>
   <form action="" id="contact-form" class="flex justify-center">
-    <div class="max-w-[546px] w-full">
+    <div class="md:max-w-[546px] w-full">
       <div class="grid md:grid-cols-2 gap-5">
         <div class="relative z-0">
           <label
@@ -48,7 +48,7 @@
           'bg-primary-A300': !isSent,
           'bg-primary-A600': isSent
         }"
-        class="text-white group border text-center flex justify-center transition-all text-lg rounded-lg px-4 py-2 mt-10 min-w-[150px]"
+        class="text-white group border text-center flex justify-center transition-all text-lg rounded-lg px-4 py-2 mt-10 min-w-[110px]"
       >
         <div v-if="isLoading" role="status">
           <svg
@@ -78,9 +78,10 @@
             </defs>
           </svg>
         </div>
-        <span v-else class="group-hover:font-medium" :class="{ 'font-medium': isSent }">
-          {{ t('homePage.screen9.form.btn') }}</span
-        >
+        <span v-else>
+          <span v-if="isSent" class="font-medium"> {{ t('homePage.screen9.form.btnSent') }}</span>
+          <span v-else class="group-hover:font-medium"> {{ t('homePage.screen9.form.btn') }}</span>
+        </span>
       </button>
     </div>
   </form>

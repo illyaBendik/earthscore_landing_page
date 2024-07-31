@@ -143,7 +143,8 @@
         "name": "Name",
         "email": "Email",
         "message": "Ihre Nachricht",
-        "btn": "Nachricht senden"
+        "btn": "Nachricht senden",
+        "btnSent": "Nachricht gesendet"
       }
     }
   }

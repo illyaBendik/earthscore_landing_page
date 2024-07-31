@@ -21,72 +21,80 @@
   </div>
   <!-- SECOND BLOCK -->
   <div class="px-6 pt-12 pb-[72px] md:pt-32 md:pb-[226px] md:px-16" id="mission">
-    <span class="block text-primary-A300 text-base font-medium md:text-xl mb-3 uppercase">{{
-      t('homePage.screen2.title')
-    }}</span>
-    <p class="text-[22px] md:text-[32px] md:leading-[40px]">
-      {{ t('homePage.screen2.text') }}
-    </p>
+    <div class="box mx-auto">
+      <span class="block text-primary-A300 text-base font-medium md:text-xl mb-3 uppercase">{{
+        t('homePage.screen2.title')
+      }}</span>
+      <p class="text-[22px] md:text-[32px] md:leading-[40px]">
+        {{ t('homePage.screen2.text') }}
+      </p>
+    </div>
   </div>
   <!-- THIRD BLOCK -->
-  <div class="grid grid-cols-1 lg:grid-cols-3 md:border border-gray-950">
-    <div class="bg-primary-A300 px-6 pt-12 pb-[72px] md:px-16 md:pt-16 md:pb-[142px]">
-      <span class="text-white text-base md:text-xl uppercase">{{
-        t('homePage.screen3.block1.title')
-      }}</span>
-      <p class="text-white text-[32px] md:text-[40px] my-5 leading-[44px]">
-        {{ t('homePage.screen3.block1.subtitle') }}:
-      </p>
-      <p class="text-base text-white">
-        {{ t('homePage.screen3.block1.text') }}
-      </p>
-    </div>
-    <div
-      class="px-6 pt-12 md:pt-28 pb-[72px] md:px-16 bg-white flex items-start relative border-y border-x-0 md:border-y-0 md:border-x border-gray-950"
-    >
-      <div>
-        <p class="text-[32px] md:text-[40px] mb-[12px] mt-[35px]">
-          {{ t('homePage.screen3.block2.title') }}
+  <div class="box mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-3 md:border border-gray-950">
+      <div class="bg-primary-A300 px-6 md:px-16 pb-[72px] md:pb-[142px]">
+        <div class="h-[220px] flex items-start flex-col justify-end">
+          <p class="text-white text-base md:text-xl uppercase pb-4">
+            {{ t('homePage.screen3.block1.title') }}
+          </p>
+          <p class="headline text-white">{{ t('homePage.screen3.block1.subtitle') }}:</p>
+        </div>
+        <p class="text-base text-white pb-4 md:pt-5">
+          {{ t('homePage.screen3.block1.text') }}
         </p>
-        <p class="text-base">
-          {{ t('homePage.screen3.block2.text') }}
-        </p>
-        <button
-          @click="toBlock('slider-consumer', 'start')"
-          class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[54%] lg:-translate-y-[-54%]"
-        >
-          <DownIcon
-            class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
-          ></DownIcon>
-          <span
-            class="text-base md:text-xl transition-all group-hover:text-primary-A300 group-hover:font-medium"
-          >
-            {{ t('homePage.screen3.btn') }}</span
-          >
-        </button>
       </div>
-    </div>
-    <div class="px-6 pt-12 md:pt-28 pb-[72px] md:px-16 bg-white flex items-start relative">
-      <div>
-        <p class="text-[32px] md:text-[40px] mb-[12px] mt-[35px]">
-          {{ t('homePage.screen3.block3.title') }}
-        </p>
-        <p class="text-base">
-          {{ t('homePage.screen3.block3.text') }}
-        </p>
-        <button
-          @click="toBlock('slider-possibility', 'start')"
-          class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[54%] lg:-translate-y-[-54%]"
-        >
-          <DownIcon
-            class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
-          ></DownIcon>
-          <span
-            class="text-base md:text-xl transition-all group-hover:text-primary-A300 group-hover:font-medium"
+      <div
+        class="px-6 pb-[72px] md:px-16 bg-white flex items-start relative border-y border-x-0 md:border-y-0 md:border-x border-gray-950"
+      >
+        <div>
+          <div class="h-[220px] flex items-end">
+            <p class="headline">
+              {{ t('homePage.screen3.block2.title') }}
+            </p>
+          </div>
+          <p class="text-base pb-4 md:pt-5">
+            {{ t('homePage.screen3.block2.text') }}
+          </p>
+          <button
+            @click="toBlock('slider-consumer', 'start')"
+            class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[54%] lg:-translate-y-[-54%]"
           >
-            {{ t('homePage.screen3.btn') }}</span
+            <DownIcon
+              class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
+            ></DownIcon>
+            <span
+              class="text-base md:text-xl transition-all group-hover:text-primary-A300 group-hover:font-medium"
+            >
+              {{ t('homePage.screen3.btn') }}</span
+            >
+          </button>
+        </div>
+      </div>
+      <div class="px-6 pb-[72px] md:px-16 bg-white flex items-start relative">
+        <div>
+          <div class="h-[220px] flex items-end">
+            <p class="headline">
+              {{ t('homePage.screen3.block3.title') }}
+            </p>
+          </div>
+          <p class="text-base pb-4 md:pt-5">
+            {{ t('homePage.screen3.block3.text') }}
+          </p>
+          <button
+            @click="toBlock('slider-possibility', 'start')"
+            class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[54%] lg:-translate-y-[-54%]"
           >
-        </button>
+            <DownIcon
+              class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
+            ></DownIcon>
+            <span
+              class="text-base md:text-xl transition-all group-hover:text-primary-A300 group-hover:font-medium"
+            >
+              {{ t('homePage.screen3.btn') }}</span
+            >
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -95,57 +103,67 @@
     :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
     class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
   >
-    <div class="max-w-[930px]">
-      <p class="text-white text-[32px] md:text-[40px] leading-[48px]">
-        {{ t('homePage.screen4.title') }}
-      </p>
-      <p class="text-white text-[32px] md:text-[40px] leading-[48px]">
-        {{ t('homePage.screen4.subtitle') }}
-      </p>
-    </div>
-    <div class="max-w-[838px]">
-      <p class="text-base text-white font-medium uppercase pt-4">
-        {{ t('homePage.screen4.text') }}
-      </p>
+    <div class="box">
+      <div class="max-w-[930px]">
+        <p class="text-white headline">
+          {{ t('homePage.screen4.title') }}
+        </p>
+        <p class="text-white headline">
+          {{ t('homePage.screen4.subtitle') }}
+        </p>
+      </div>
+      <div class="max-w-[838px]">
+        <p class="text-base text-white font-medium uppercase pt-4">
+          {{ t('homePage.screen4.text') }}
+        </p>
+      </div>
     </div>
   </div>
   <!-- FOUR FIVE -->
-  <SliderConsumer></SliderConsumer>
+  <div class="box mx-auto">
+    <SliderConsumer></SliderConsumer>
+  </div>
   <!-- SIX BLOCK -->
   <div
     :style="{ 'background-image': 'url(' + BgImg3 + ')' }"
     class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
   >
-    <div class="text-white max-w-[838px]">
-      <p class="text-[32px] md:text-[40px] leading-[48px]">
-        {{ t('homePage.screen6.title') }} <br />
-      </p>
-      <p class="text-[32px] md:text-[40px] leading-[48px]">
-        {{ t('homePage.screen6.subtitle') }}
-      </p>
-      <p class="text-base font-medium uppercase pt-4">
-        {{ t('homePage.screen6.text') }}
-      </p>
+    <div class="box">
+      <div class="text-white max-w-[838px]">
+        <p class="headline">{{ t('homePage.screen6.title') }} <br /></p>
+        <p class="headline">
+          {{ t('homePage.screen6.subtitle') }}
+        </p>
+        <p class="text-base font-medium uppercase pt-4">
+          {{ t('homePage.screen6.text') }}
+        </p>
+      </div>
     </div>
   </div>
   <!-- SEVEN BLOCK -->
-  <SliderPossibility></SliderPossibility>
+  <div class="box mx-auto">
+    <SliderPossibility></SliderPossibility>
+  </div>
   <!-- EIGHT  BLOCK -->
-  <h3 class="text-[32px] md:text-[40px] leading-[48px] px-6 md:px-16 py-12">
-    {{ t('homePage.screen8.title') }}
-  </h3>
-  <SliderTeam></SliderTeam>
+  <div class="box mx-auto">
+    <h3 class="headline px-6 md:px-16 py-12">
+      {{ t('homePage.screen8.title') }}
+    </h3>
+    <SliderTeam></SliderTeam>
+  </div>
   <!-- NINE  BLOCK -->
-  <div class="client-block grid md:grid-cols-2" id="viewport-contact-form">
-    <div class="flex flex-col">
-      <h2 class="text-[32px]">{{ t('homePage.screen9.title') }}</h2>
-      <p class="text-xl mt-5">{{ t('homePage.screen9.subtitle') }}</p>
-      <div class="mt-10 md:mt-20 mb-10">
-        <ContactList></ContactList>
+  <div class="box mx-auto">
+    <div class="client-block grid md:grid-cols-2" id="viewport-contact-form">
+      <div class="flex flex-col">
+        <h2 class="headline">{{ t('homePage.screen9.title') }}</h2>
+        <p class="text-xl mt-5">{{ t('homePage.screen9.subtitle') }}</p>
+        <div class="mt-10 md:mt-20 mb-10">
+          <ContactList></ContactList>
+        </div>
       </div>
-    </div>
-    <div>
-      <ContactForm></ContactForm>
+      <div>
+        <ContactForm></ContactForm>
+      </div>
     </div>
   </div>
 </template>

@@ -14,7 +14,7 @@
     </div>
     <div class="col-span-6 grid grid-col-3 xl:grid-cols-5 gap-8 items-center justify-items-center">
       <div
-        class="h-[275px] w-[275px] sm:h-[342px] sm:w-full col-span-3 xl:col-span-2 bg-center bg-cover rounded-md"
+        class="h-[271px] w-[271px] sm:h-[344px] sm:w-[344px] col-span-3 xl:col-span-2 bg-center bg-cover rounded-md"
         :style="{ 'background-image': 'url(' + img + ')' }"
       ></div>
       <div class="md:px-4 hidden sm:block col-span-3">
@@ -23,7 +23,7 @@
           <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
           <p class="text-base font-medium">{{ deskPosition }}</p>
         </div>
-        <p v-if="isActive" class="mt-10">
+        <p v-if="isActive" class="mt-8">
           {{ text }}
         </p>
       </div>

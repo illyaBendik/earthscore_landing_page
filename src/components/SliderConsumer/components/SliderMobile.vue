@@ -1,5 +1,5 @@
 <template>
-  <h3 class="text-[32px] md:text-[40px] mt-16 mb-8 px-6 md:px-14">
+  <h3 class="headline mt-16 mb-8 px-6 md:px-14">
     {{ t('homePage.screen5.title') }}
   </h3>
 
@@ -26,18 +26,16 @@
     >
       <span class="font-medium text-[18px] md:text-xl">{{ contentItem.name }}</span>
     </swiper-slide>
-    <div class="relative w-full mt-14">
-      <div class="w-full h-0.5 bg-black-N80">
+    <div class="relative w-full mt-14 px-[0.5]">
+      <div class="w-full h-1.5 bg-black-N80 rounded-md">
         <div class="relative">
           <div
-            class="w-[75px] h-1.5 rounded-sm bg-primary-A300 absolute top-[-3px]"
+            class="w-[75px] h-1.5 rounded-md bg-primary-A300 absolute top-[0px]"
             :class="{
               'left-[0px]': swiperInstancePagination && swiperInstancePagination.activeIndex === 0,
-              'left-[75px]': swiperInstancePagination && swiperInstancePagination.activeIndex === 1,
-              'left-[150px]':
-                swiperInstancePagination && swiperInstancePagination.activeIndex === 2,
-              'left-[230px]':
-                swiperInstancePagination && swiperInstancePagination.activeIndex === 3,
+              'left-[25%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 1,
+              'left-[50%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 2,
+              'left-[75%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 3,
               'right-0': swiperInstancePagination && swiperInstancePagination.activeIndex === 4
             }"
           ></div>
