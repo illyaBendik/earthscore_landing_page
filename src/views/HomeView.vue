@@ -3,7 +3,7 @@
   <div class="box mx-auto">
     <div
       :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
-      class="w-full min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
+      class="w-full h-[784px] flex flex-col justify-center items-center bg-cover bg-center"
     >
       <span class="inline-block text-center"
         ><img class="md:h-[272px] h-[165px] w-[215px] md:w-[373px]" :src="ImgLogo" alt="Logo"
@@ -104,7 +104,7 @@
   <div class="box mx-auto">
     <div
       :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
-      class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
+      class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
     >
       <div class="max-w-[930px]">
         <p class="text-white headline">
@@ -129,7 +129,7 @@
   <div class="box mx-auto">
     <div
       :style="{ 'background-image': 'url(' + BgImg3 + ')' }"
-      class="w-full h-screen flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
+      class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
     >
       <div class="box">
         <div class="text-white max-w-[838px]">
