@@ -85,7 +85,7 @@ const setLocale = () => {
 
 const onClick = (id: string) => {
   emit('close')
-  toBlock(id, 'start')
+  toBlock(id)
 }
 
 const close = (e: any) => {

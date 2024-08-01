@@ -14,7 +14,7 @@
       >
       <button
         type="button"
-        @click="toBlock('contact-form', 'start')"
+        @click="toBlock('contact-form')"
         class="rounded-md transition-all bg-primary-A300 active:bg-primary-A600 hover:font-medium text-white mt-12 px-4 py-2"
       >
         {{ t('homePage.screen1.btn') }}
@@ -55,7 +55,7 @@
             {{ t('homePage.screen3.block2.text') }}
           </p>
           <button
-            @click="toBlock('slider-consumer', 'start')"
+            @click="toBlock('slider-consumer')"
             class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[57%] lg:-translate-y-[-57%]"
           >
             <DownIcon
@@ -80,7 +80,7 @@
             {{ t('homePage.screen3.block3.text') }}
           </p>
           <button
-            @click="toBlock('slider-possibility', 'start')"
+            @click="toBlock('slider-possibility')"
             class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[57%] lg:-translate-y-[-57%]"
           >
             <DownIcon

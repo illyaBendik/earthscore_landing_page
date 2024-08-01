@@ -1,8 +1,15 @@
-export const toBlock = async (id: string, block: ScrollLogicalPosition | undefined) => {
-  document.getElementById(id)?.scrollIntoView({
-    block,
-    behavior: 'smooth'
-  })
+export const toBlock = async (id: string) => {
+  const element = document.getElementById(id)
+  if (element) {
+    const rect = element.getBoundingClientRect()
+    const margin = window.innerWidth > 768 ? 95 : 200
+    const offset = window.scrollY + rect.top - margin
+
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    })
+  }
 }
 
 export const toBlockWithPromise = async (id: string, block: ScrollLogicalPosition | undefined) => {
