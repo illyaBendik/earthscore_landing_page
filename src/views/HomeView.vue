@@ -20,10 +20,8 @@
         {{ t('homePage.screen1.btn') }}
       </button>
     </div>
-  </div>
-  <!-- SECOND BLOCK -->
-  <div class="px-6 pt-12 pb-[72px] md:pt-32 md:pb-[226px] md:px-16" id="mission">
-    <div class="box mx-auto">
+    <!-- SECOND BLOCK -->
+    <div class="px-6 pt-12 pb-[72px] md:pt-32 md:pb-[226px] md:px-16" id="mission">
       <span class="block text-primary-A300 text-base font-medium md:text-xl mb-3 uppercase">{{
         t('homePage.screen2.title')
       }}</span>
@@ -31,10 +29,8 @@
         {{ t('homePage.screen2.text') }}
       </p>
     </div>
-  </div>
-  <!-- THIRD BLOCK -->
-  <div class="box mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-3 md:border border-gray-950">
+    <!-- THIRD BLOCK -->
+    <div id="our-solutions" class="grid grid-cols-1 lg:grid-cols-3 md:border border-gray-950">
       <div class="bg-primary-A300 px-6 md:px-16 pb-[72px] md:pb-[142px]">
         <div class="h-[220px] flex items-start flex-col justify-end">
           <p class="text-white text-base md:text-xl uppercase pb-4">
@@ -60,7 +56,7 @@
           </p>
           <button
             @click="toBlock('slider-consumer', 'start')"
-            class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[54%] lg:-translate-y-[-54%]"
+            class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[57%] lg:-translate-y-[-57%]"
           >
             <DownIcon
               class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
@@ -85,7 +81,7 @@
           </p>
           <button
             @click="toBlock('slider-possibility', 'start')"
-            class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[54%] lg:-translate-y-[-54%]"
+            class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[57%] lg:-translate-y-[-57%]"
           >
             <DownIcon
               class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
@@ -99,9 +95,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- FOUR BLOCK -->
-  <div class="box mx-auto">
+    <!-- FOUR BLOCK -->
     <div
       :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
       class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
@@ -120,13 +114,9 @@
         </p>
       </div>
     </div>
-  </div>
-  <!-- FOUR FIVE -->
-  <div class="box mx-auto">
+    <!-- FOUR FIVE -->
     <SliderConsumer></SliderConsumer>
-  </div>
-  <!-- SIX BLOCK -->
-  <div class="box mx-auto">
+    <!-- SIX BLOCK -->
     <div
       :style="{ 'background-image': 'url(' + BgImg3 + ')' }"
       class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
@@ -143,20 +133,14 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- SEVEN BLOCK -->
-  <div class="box mx-auto">
+    <!-- SEVEN BLOCK -->
     <SliderPossibility></SliderPossibility>
-  </div>
-  <!-- EIGHT  BLOCK -->
-  <div class="box mx-auto">
+    <!-- EIGHT  BLOCK -->
     <h3 class="headline px-6 md:px-16 py-12">
       {{ t('homePage.screen8.title') }}
     </h3>
     <SliderTeam></SliderTeam>
-  </div>
-  <!-- NINE  BLOCK -->
-  <div class="box mx-auto">
+    <!-- NINE  BLOCK -->
     <div class="client-block grid md:grid-cols-2" id="viewport-contact-form">
       <div class="flex flex-col">
         <h2 class="headline">{{ t('homePage.screen9.title') }}</h2>

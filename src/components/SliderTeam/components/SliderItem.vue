@@ -41,7 +41,7 @@
       </button>
     </div>
   </div>
-  <div class="px-4 mt-5 sm:hidden">
+  <div class="px-6 mt-5 sm:hidden">
     <h5 class="text-[28px]">{{ name }}</h5>
     <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
     <p class="text-base font-medium">{{ deskPosition }}</p>

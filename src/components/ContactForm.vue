@@ -48,7 +48,7 @@
           'bg-primary-A300': !isSent,
           'bg-primary-A600': isSent
         }"
-        class="text-white group border text-center flex justify-center transition-all text-lg rounded-lg px-4 py-2 mt-10 min-w-[110px]"
+        class="text-white group border text-center flex justify-center transition-all text-lg rounded-lg px-4 py-2 mt-10 min-w-[150px]"
       >
         <div v-if="isLoading" role="status">
           <svg

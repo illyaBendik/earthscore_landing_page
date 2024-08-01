@@ -10,8 +10,10 @@
         :spaceBetween="30"
         :key="Number(isMobileScreen)"
         :allowTouchMove="isMobileScreen"
-        :slidesPerView="isSmallScreen ? 1 : 1.1"
         :speed="500"
+        :slidesPerView="
+          isSmallScreen || (swiperInstance && swiperInstance.activeIndex == 3) ? 1 : 1.1
+        "
       >
         <swiper-slide v-for="(item, i) in list" :key="i" v-slot="{ isActive }">
           <div class="grid grid-cols-1 lg:grid-cols-3 z-20">
@@ -22,9 +24,14 @@
               ></div>
               <div
                 :style="{ 'background-image': 'url(' + item.imgMob + ')' }"
-                class="h-[377px] bg-contain bg-no-repeat bg-center rounded-md md:hidden"
+                class="h-[377px] bg-cover bg-no-repeat bg-center rounded-md md:hidden"
               ></div>
-              <div v-if="swiperInstance" class="fixed right-[10px] mt-5 space-x-5">
+              <span class="invisible h-0">{{ swiperInstance && swiperInstance.activeIndex }}</span>
+              <div
+                v-if="swiperInstance"
+                :key="swiperInstance.activeIndex"
+                class="fixed right-[10px] mt-5 space-x-5"
+              >
                 <span v-for="(_, btnIndex) in list" :key="btnIndex">
                   <button
                     @click="onClikcBtn(btnIndex)"
@@ -42,11 +49,11 @@
               </div>
               <p
                 :class="{ invisible: !isActive }"
-                class="text-[32px] font-light lg:my-4 mb-3 mt-16 lg:mt-12 px-4 lg:px-0"
+                class="text-[32px] font-light lg:my-4 mb-3 mt-16 lg:mt-12 px-6 lg:px-0"
               >
                 {{ item.title }}
               </p>
-              <p :class="{ invisible: !isActive }" class="text-base px-4 lg:px-0">
+              <p :class="{ invisible: !isActive }" class="text-base px-6 lg:px-0">
                 {{ item.text }}
               </p>
             </div>

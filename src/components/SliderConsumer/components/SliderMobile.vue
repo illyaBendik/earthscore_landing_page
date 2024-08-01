@@ -27,15 +27,15 @@
       <span class="font-medium text-[18px] md:text-xl">{{ contentItem.name }}</span>
     </swiper-slide>
     <div class="relative w-full mt-14 px-[0.5]">
-      <div class="w-full h-1.5 bg-black-N80 rounded-md">
+      <div class="w-full h-1.5 bg-black-N40 rounded-md">
         <div class="relative">
           <div
             class="w-[75px] h-1.5 rounded-md bg-primary-A300 absolute top-[0px]"
             :class="{
               'left-[0px]': swiperInstancePagination && swiperInstancePagination.activeIndex === 0,
-              'left-[25%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 1,
-              'left-[50%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 2,
-              'left-[75%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 3,
+              'left-[20%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 1,
+              'left-[45%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 2,
+              'left-[70%]': swiperInstancePagination && swiperInstancePagination.activeIndex === 3,
               'right-0': swiperInstancePagination && swiperInstancePagination.activeIndex === 4
             }"
           ></div>
@@ -64,7 +64,7 @@
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
       v-slot="{ isActive }"
-      ><div class="px-5 pt-5">
+      ><div class="px-6 pt-5">
         <div
           :style="{ 'background-image': 'url(' + contentItem.img + ')' }"
           class="h-[322px] bg-cover bg-center rounded-md"
