@@ -1,4 +1,4 @@
-export const toBlock = async (id: string) => {
+export const toBlock = (id: string) => {
   const element = document.getElementById(id)
   if (element) {
     const rect = element.getBoundingClientRect()
