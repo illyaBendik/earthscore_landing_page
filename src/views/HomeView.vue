@@ -14,7 +14,7 @@
       >
       <button
         type="button"
-        @click="toBlock('contact-form')"
+        @click="toBlock('contact-form', screenWidth > 768 ? 95 : 200)"
         class="rounded-md transition-all bg-primary-A300 active:bg-primary-A600 hover:font-medium text-white mt-12 px-4 py-2"
       >
         {{ t('homePage.screen1.btn') }}
@@ -55,7 +55,7 @@
             {{ t('homePage.screen3.block2.text') }}
           </p>
           <button
-            @click="toBlock('slider-consumer')"
+            @click="toBlock('slider-consumer', screenWidth > 768 ? 95 : 200)"
             class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[57%] lg:-translate-y-[-57%]"
           >
             <DownIcon
@@ -80,7 +80,7 @@
             {{ t('homePage.screen3.block3.text') }}
           </p>
           <button
-            @click="toBlock('slider-possibility')"
+            @click="toBlock('slider-possibility', screenWidth > 768 ? 95 : 200)"
             class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[57%] lg:-translate-y-[-57%]"
           >
             <DownIcon
@@ -136,13 +136,13 @@
     <!-- SEVEN BLOCK -->
     <SliderPossibility></SliderPossibility>
     <!-- EIGHT  BLOCK -->
-    <h3 class="headline px-6 md:px-16 py-12">
+    <h3 class="headline px-6 md:px-16 py-12" id="slider-team">
       {{ t('homePage.screen8.title') }}
     </h3>
     <SliderTeam></SliderTeam>
     <!-- NINE  BLOCK -->
     <div class="client-block grid md:grid-cols-2" id="viewport-contact-form">
-      <div class="flex flex-col">
+      <div class="flex flex-col" id="contact-form">
         <h2 class="headline">{{ t('homePage.screen9.title') }}</h2>
         <p class="text-xl mt-5">{{ t('homePage.screen9.subtitle') }}</p>
         <div class="mt-10 md:mt-20 mb-10">
@@ -168,6 +168,9 @@ import SliderConsumer from '@/components/SliderConsumer/SliderConsumer.vue'
 import SliderTeam from '@/components/SliderTeam/SliderTeam.vue'
 import SliderPossibility from '@/components/SliderPossibility.vue'
 import { useI18n } from 'vue-i18n'
+import { useWidth } from '@/composables/useWidth'
 
 const { t } = useI18n({ useScope: 'global' })
+
+const { screenWidth } = useWidth()
 </script>

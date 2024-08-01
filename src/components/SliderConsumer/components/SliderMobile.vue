@@ -18,15 +18,18 @@
       }
     }"
     :slides-per-view="1"
+    :auto-height="true"
   >
     <swiper-slide
       class="uppercase px-6 md:px-14"
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
     >
-      <span class="font-medium text-[18px] md:text-xl">{{ contentItem.name }}</span>
+      <span class="font-medium text-[18px] md:text-xl leading-[21px] h-[46px] block">{{
+        contentItem.name
+      }}</span>
     </swiper-slide>
-    <div class="relative w-full mt-14 px-[0.5]">
+    <div class="relative w-full mt-[32px] px-[0.5]">
       <div class="w-full h-1.5 bg-black-N40 rounded-md">
         <div class="relative">
           <div
@@ -58,15 +61,15 @@
         translate: ['120%', 0, -500]
       }
     }"
-    :slides-per-view="1"
+    :slides-per-view="1.1"
   >
     <swiper-slide
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
       v-slot="{ isActive }"
-      ><div class="px-6 pt-5">
+      ><div class="pl-6 pt-5">
         <div
-          :style="{ 'background-image': 'url(' + contentItem.img + ')' }"
+          :style="{ 'background-image': 'url(' + contentItem.imgMobi + ')' }"
           class="h-[322px] bg-cover bg-center rounded-md"
         ></div>
         <p v-if="isActive" class="my-5 text-base">{{ contentItem.text }}</p>
@@ -80,7 +83,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
-defineProps<{ contentList: { name: string; img: string; className: string; text: string }[] }>()
+defineProps<{ contentList: { name: string; imgMobi: string; className: string; text: string }[] }>()
 
 const swiperInstanceMain = ref()
 const swiperInstancePagination = ref()

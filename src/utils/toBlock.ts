@@ -1,8 +1,7 @@
-export const toBlock = (id: string) => {
+export const toBlock = (id: string, margin: number) => {
   const element = document.getElementById(id)
   if (element) {
     const rect = element.getBoundingClientRect()
-    const margin = window.innerWidth > 768 ? 95 : 200
     const offset = window.scrollY + rect.top - margin
 
     window.scrollTo({

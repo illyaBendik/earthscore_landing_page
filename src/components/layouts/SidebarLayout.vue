@@ -29,7 +29,7 @@
           <li
             v-for="(contentItem, index) in list"
             :key="index"
-            @click.prevent="onClick(contentItem.id)"
+            @click.prevent="onClick(contentItem.id, contentItem.margin)"
           >
             <a
               class="text-xl text-light transition-all hover:font-medium"
@@ -55,6 +55,7 @@ import CloseIcon from '@/components/icons/CloseIcon.vue'
 import LangIcon from '@/components/icons/LangIcon.vue'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
+import { useWidth } from '@/composables/useWidth'
 
 const EN_LOCALE = 'en'
 const DE_LOCALE = 'de'
@@ -65,14 +66,27 @@ defineProps<{
 }>()
 
 const emit = defineEmits(['close'])
+const { screenWidth } = useWidth()
 
 const list = computed(() => [
-  { name: t('sidebar.list.item1'), id: 'mission' },
-  { name: t('sidebar.list.item2'), id: 'our-solutions' },
-  { name: t('sidebar.list.item3'), id: 'slider-possibility' },
-  { name: t('sidebar.list.item4'), id: 'slider-consumer' },
-  { name: t('sidebar.list.item5'), id: 'slider-team' },
-  { name: t('sidebar.list.item6'), id: 'contact-form' }
+  { name: t('sidebar.list.item1'), id: 'mission', margin: screenWidth.value > 768 ? 95 : 200 },
+  {
+    name: t('sidebar.list.item2'),
+    id: 'our-solutions',
+    margin: screenWidth.value > 768 ? 95 : 200
+  },
+  {
+    name: t('sidebar.list.item3'),
+    id: 'slider-consumer',
+    margin: screenWidth.value > 768 ? 95 : 200
+  },
+  {
+    name: t('sidebar.list.item4'),
+    id: 'slider-possibility',
+    margin: screenWidth.value > 768 ? 95 : 200
+  },
+  { name: t('sidebar.list.item5'), id: 'slider-team', margin: 50 },
+  { name: t('sidebar.list.item6'), id: 'contact-form', margin: screenWidth.value > 768 ? 95 : 100 }
 ])
 
 const swithcLocaleTo = computed(() => (locale.value == EN_LOCALE ? DE_LOCALE : EN_LOCALE))
@@ -83,9 +97,9 @@ const setLocale = () => {
   emit('close')
 }
 
-const onClick = (id: string) => {
+const onClick = (id: string, margin: number) => {
   emit('close')
-  toBlock(id)
+  toBlock(id, margin)
 }
 
 const close = (e: any) => {

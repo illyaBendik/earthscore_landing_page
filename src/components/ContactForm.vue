@@ -1,5 +1,5 @@
 <template>
-  <form action="" id="contact-form" class="flex justify-center">
+  <form action="" class="flex justify-center">
     <div class="md:max-w-[546px] w-full">
       <div class="grid md:grid-cols-2 gap-5">
         <div class="relative z-0">

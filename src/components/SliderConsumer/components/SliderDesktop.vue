@@ -14,11 +14,11 @@
             <div class="px-12">
               <div
                 :style="{ 'background-image': 'url(' + item.img + ')' }"
-                class="w-full h-[435px] bg-no-repeat bg-center rounded-md"
+                class="w-full bg-no-repeat bg-cover bg-center rounded-md"
                 :class="{
-                  'bg-contain':
+                  'h-[470px]':
                     swiperInstanceMain && swiperInstanceMain.activeIndex === contentList.length - 1,
-                  'bg-cover':
+                  'h-[435px]':
                     swiperInstanceMain && swiperInstanceMain.activeIndex !== contentList.length - 1
                 }"
               ></div>

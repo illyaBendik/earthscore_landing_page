@@ -1,5 +1,5 @@
 <template>
-  <div id="slider-team">
+  <div>
     <swiper
       :key="Number(isMobileScreen)"
       :allowTouchMove="isMobileScreen"
@@ -44,7 +44,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 import SliderItem from './components/SliderItem.vue'
@@ -56,6 +56,7 @@ import ImgUser5 from '@/assets/img/user-5.png'
 import ImgUser6 from '@/assets/img/user-6.png'
 
 import { useI18n } from 'vue-i18n'
+import { useWidth } from '@/composables/useWidth'
 
 const { t } = useI18n({ useScope: 'global' })
 
@@ -107,7 +108,7 @@ const users = computed(() => [
 const swiperInstanceMain = ref()
 const swiperInstancePagination = ref()
 const slideIndex = ref(0)
-const screenWidth = ref(window.innerWidth)
+const { screenWidth } = useWidth()
 
 const onSwiperMain = (swiper: any) => {
   swiperInstanceMain.value = swiper
@@ -159,18 +160,6 @@ const slidesPerView = computed(() => {
     return 6
   }
   return 2
-})
-
-const handleResize = () => {
-  screenWidth.value = window.innerWidth
-}
-
-onMounted(() => {
-  window.addEventListener('resize', handleResize)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', handleResize)
 })
 </script>
 <style>
