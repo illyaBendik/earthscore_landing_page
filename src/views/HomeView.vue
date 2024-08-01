@@ -32,13 +32,13 @@
     <!-- THIRD BLOCK -->
     <div id="our-solutions" class="grid grid-cols-1 lg:grid-cols-3 md:border border-gray-950">
       <div class="bg-primary-A300 px-6 md:px-16 pb-[72px] md:pb-[142px]">
-        <div class="h-[220px] flex items-start flex-col justify-end">
+        <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-start flex-col justify-end">
           <p class="text-white text-base md:text-xl uppercase pb-4">
             {{ t('homePage.screen3.block1.title') }}
           </p>
           <p class="headline text-white">{{ t('homePage.screen3.block1.subtitle') }}:</p>
         </div>
-        <p class="text-base text-white pb-4 md:pt-5">
+        <p class="text-base text-white pb-4 pt-4">
           {{ t('homePage.screen3.block1.text') }}
         </p>
       </div>
@@ -46,12 +46,12 @@
         class="px-6 pb-[72px] md:px-16 bg-white flex items-start relative border-y border-x-0 md:border-y-0 md:border-x border-gray-950"
       >
         <div>
-          <div class="h-[220px] flex items-end">
+          <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-end">
             <p class="headline">
               {{ t('homePage.screen3.block2.title') }}
             </p>
           </div>
-          <p class="text-base pb-4 md:pt-5">
+          <p class="text-base pb-4 pt-4">
             {{ t('homePage.screen3.block2.text') }}
           </p>
           <button
@@ -71,12 +71,12 @@
       </div>
       <div class="px-6 pb-[72px] md:px-16 bg-white flex items-start relative">
         <div>
-          <div class="h-[220px] flex items-end">
+          <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-end">
             <p class="headline">
               {{ t('homePage.screen3.block3.title') }}
             </p>
           </div>
-          <p class="text-base pb-4 md:pt-5">
+          <p class="text-base pb-4 pt-4">
             {{ t('homePage.screen3.block3.text') }}
           </p>
           <button
