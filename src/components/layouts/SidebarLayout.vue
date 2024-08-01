@@ -80,6 +80,7 @@ const swithcLocaleTo = computed(() => (locale.value == EN_LOCALE ? DE_LOCALE : E
 const setLocale = () => {
   locale.value = swithcLocaleTo.value
   localStorage.setItem('lang', locale.value)
+  emit('close')
 }
 
 const onClick = (id: string) => {
