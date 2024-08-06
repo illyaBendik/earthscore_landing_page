@@ -46,7 +46,6 @@
       </div>
     </div>
   </swiper>
-
   <swiper
     :grabCursor="true"
     @swiper="onSwiperMain"
@@ -61,7 +60,7 @@
         translate: ['120%', 0, -500]
       }
     }"
-    :slides-per-view="1.1"
+    :slides-per-view="1"
   >
     <swiper-slide
       v-for="(contentItem, contentItemIndex) in contentList"
@@ -70,7 +69,7 @@
       ><div class="pl-6 pt-5">
         <div
           :style="{ 'background-image': 'url(' + contentItem.imgMobi + ')' }"
-          class="h-[322px] bg-cover bg-center rounded-md"
+          class="h-[322px] bg-contain bg-center bg-no-repeat rounded-md"
         ></div>
         <p v-if="isActive" class="my-5 text-base">{{ contentItem.text }}</p>
       </div></swiper-slide
