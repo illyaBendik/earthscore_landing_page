@@ -47,7 +47,7 @@
               </div>
               <p
                 :class="{ invisible: !isActive }"
-                class="text-[32px] leading-[21px] font-medium lg:my-4 mb-3 mt-16 lg:mt-12 px-6 lg:px-0"
+                class="text-[32px] leading-[21px] font-light lg:my-4 mb-3 mt-16 lg:mt-12 px-6 lg:px-0"
               >
                 {{ item.title }}
               </p>
