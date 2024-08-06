@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[80.7vh] flex items-center mt-20">
+  <div class="min-h-[81vh] flex items-center mt-20 box mx-auto px-6 md:px-16">
     <div class="container mx-auto">
       <div class="grid md:grid-cols-2">
         <div class="order-last md:order-first px-4 pt-4 pb-20 md:pb-0 md:pt-0">
@@ -27,7 +27,7 @@
         </div>
         <div
           :style="{ 'background-image': 'url(' + Img + ')' }"
-          class="h-[445px] bg-cover bg-center"
+          class="h-[445px] bg-cover bg-center rounded-[4px]"
         ></div>
       </div>
     </div>
