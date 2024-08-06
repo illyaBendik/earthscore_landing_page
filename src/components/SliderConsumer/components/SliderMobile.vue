@@ -66,12 +66,12 @@
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
       v-slot="{ isActive }"
-      ><div class="px-6 pt-5">
+      ><div class="pt-5">
         <div
           :style="{ 'background-image': 'url(' + contentItem.imgMobi + ')' }"
           class="h-[322px] bg-contain bg-center bg-no-repeat rounded-md"
         ></div>
-        <p v-if="isActive" class="my-5 text-base">{{ contentItem.text }}</p>
+        <p v-if="isActive" class="my-5 px-6 text-base">{{ contentItem.text }}</p>
       </div></swiper-slide
     >
   </swiper>
