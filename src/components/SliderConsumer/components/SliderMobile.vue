@@ -66,7 +66,7 @@
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
       v-slot="{ isActive }"
-      ><div class="pl-6 pt-5">
+      ><div class="px-6 pt-5">
         <div
           :style="{ 'background-image': 'url(' + contentItem.imgMobi + ')' }"
           class="h-[322px] bg-contain bg-center bg-no-repeat rounded-md"
