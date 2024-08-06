@@ -3,18 +3,18 @@
     <div class="box mx-auto px-6 pt-4 pb-20 md:pb-0 md:pt-0 md:px-16 text-base text-black-N900">
       <div class="grid md:grid-cols-2 gap-5 pt-10 items-center">
         <div class="order-last md:order-first">
-          <h1 class="text-[32px] mb-8">Privacy Policy</h1>
-          <p class="text-xl pb-5">Allgemeine Informationen zur Datenverarbeitung</p>
+          <h1 class="headline mb-8">Privacy Policy</h1>
+          <p class="text-xl pb-4">Allgemeine Informationen zur Datenverarbeitung</p>
           <p class="font-medium">Verantwortliche Stelle:</p>
           <p>WhatsGreen Research & Science GmbH</p>
           <p>Rommerskirchener Str. 21</p>
           <p>Walzwerk Atelier 65</p>
           <p>50259 Pulheim</p>
-          <p class="pb-6">Deutschland</p>
+          <p class="pb-4">Deutschland</p>
           <p>Telefon: +49 (0)223 4786954 (Zentrale)</p>
-          <p class="pb-10">Email: info@earthscore.com</p>
+          <p class="pb-4">Email: info@earthscore.com</p>
 
-          <p class="mb-5">
+          <p class="pb-4">
             Dieser Internetauftritt (nachfolgend „Website“) wird bereitgestellt von der WhatsGreen
             Research & Science GmbH (nachfolgend „uns“ oder „wir“).
           </p>
