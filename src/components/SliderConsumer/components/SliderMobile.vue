@@ -49,6 +49,7 @@
   <swiper
     :grabCursor="true"
     @swiper="onSwiperMain"
+    :spaceBetween="30"
     @slideChange="isPagination ? () => {} : onChangeSlide($event)"
     :creativeEffect="{
       prev: {
@@ -66,14 +67,14 @@
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
       v-slot="{ isActive }"
-      ><div>
+      ><div class="min-h-[695px]">
         <div
           :style="{ 'background-image': 'url(' + contentItem.imgMobi + ')' }"
-          class="h-[322px] mt-8 sm:hidden bg-contain bg-center bg-no-repeat rounded-md"
+          class="h-[322px] mt-8 sm:hidden bg-contain bg-center bg-no-repeat"
         ></div>
         <div
           :style="{ 'background-image': 'url(' + contentItem.img + ')' }"
-          class="hidden sm:block mt-8 h-[453px] bg-cover bg-center bg-no-repeat rounded-md"
+          class="hidden sm:block mt-8 h-[453px] bg-cover bg-center bg-no-repeat"
         ></div>
         <p v-if="isActive" class="mb-5 mt-8 px-6 sm:px-8 lg:px-16 text-base">
           {{ contentItem.text }}

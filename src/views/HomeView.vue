@@ -31,7 +31,7 @@
     </div>
     <!-- THIRD BLOCK -->
     <div id="our-solutions" class="grid grid-cols-1 lg:grid-cols-3 lg:border border-gray-950">
-      <div class="bg-primary-A300 px-6 sm:px-8 lg:px-16 pb-[72px] md:pb-[142px]">
+      <div class="bg-primary-A300 px-6 sm:px-8 lg:px-16 pb-[72px] lg:pb-[142px]">
         <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-start flex-col justify-end">
           <p class="text-white text-base md:text-xl uppercase pb-4">
             {{ t('homePage.screen3.block1.title') }}
