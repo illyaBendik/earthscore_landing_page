@@ -1,5 +1,5 @@
 <template>
-  <h3 class="headline mt-16 mb-8 px-6 md:px-14">
+  <h3 class="headline mt-16 mb-8 px-6 sm:px-8 lg:px-16">
     {{ t('homePage.screen5.title') }}
   </h3>
 
@@ -21,7 +21,7 @@
     :auto-height="true"
   >
     <swiper-slide
-      class="uppercase px-6 md:px-14"
+      class="uppercase px-6 sm:px-8 lg:px-16"
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
     >
@@ -66,12 +66,18 @@
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
       v-slot="{ isActive }"
-      ><div class="pt-5">
+      ><div>
         <div
           :style="{ 'background-image': 'url(' + contentItem.imgMobi + ')' }"
-          class="h-[322px] bg-contain bg-center bg-no-repeat rounded-md"
+          class="h-[322px] mt-8 sm:hidden bg-contain bg-center bg-no-repeat rounded-md"
         ></div>
-        <p v-if="isActive" class="my-5 px-6 text-base">{{ contentItem.text }}</p>
+        <div
+          :style="{ 'background-image': 'url(' + contentItem.img + ')' }"
+          class="hidden sm:block mt-8 h-[453px] bg-cover bg-center bg-no-repeat rounded-md"
+        ></div>
+        <p v-if="isActive" class="mb-5 mt-8 px-6 sm:px-8 lg:px-16 text-base">
+          {{ contentItem.text }}
+        </p>
       </div></swiper-slide
     >
   </swiper>
@@ -82,7 +88,9 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
-defineProps<{ contentList: { name: string; imgMobi: string; className: string; text: string }[] }>()
+defineProps<{
+  contentList: { name: string; imgMobi: string; img: string; className: string; text: string }[]
+}>()
 
 const swiperInstanceMain = ref()
 const swiperInstancePagination = ref()

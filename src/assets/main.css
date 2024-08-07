@@ -27,11 +27,6 @@
       @apply rounded-full bg-sky-500;
     }
   }
-
-  .client-block {
-    @apply px-6 md:px-14 py-16 md:py-24;
-  }
-
   .headline {
     @apply text-[32px] leading-[38px] md:text-[40px] md:leading-[48px];
   }

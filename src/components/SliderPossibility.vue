@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-4 z-20 py-12 md:py-16">
-    <h2 class="headline mb-8 pl-6 md:pl-16">
+    <h2 class="headline mb-8 px-6 sm:px-8 lg:px-16">
       {{ t('homePage.screen7.title') }}
     </h2>
     <div class="col-span-3">
@@ -47,11 +47,11 @@
               </div>
               <p
                 :class="{ invisible: !isActive }"
-                class="text-[18px] md:text-[32px] leading-[21px] font-light lg:my-4 mb-3 mt-16 lg:mt-12 px-6 lg:px-0"
+                class="text-[18px] md:text-[32px] leading-[21px] font-medium md:font-light lg:my-4 mb-3 mt-16 lg:mt-12 px-6 sm:px-8 lg:px-0"
               >
                 {{ item.title }}
               </p>
-              <p :class="{ invisible: !isActive }" class="text-base px-6 lg:px-0">
+              <p :class="{ invisible: !isActive }" class="text-base px-6 sm:px-8 lg:px-0">
                 {{ item.text }}
               </p>
             </div>

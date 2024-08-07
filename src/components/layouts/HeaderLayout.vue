@@ -1,7 +1,7 @@
 <template>
   <header
     id="header"
-    class="fixed top-0 z-50 w-full h-[90px] px-6 md:px-16 flex items-center justify-between"
+    class="fixed top-0 z-50 w-full h-[90px] px-6 sm:px-8 lg:px-16 flex items-center justify-between"
     :class="{
       'bg-white shadow-lg transition-all ease-out duration-500':
         isScrolled && useRoute().name === 'home',

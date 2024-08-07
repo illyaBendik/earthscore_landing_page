@@ -21,7 +21,7 @@
       </button>
     </div>
     <!-- SECOND BLOCK -->
-    <div class="px-6 pt-12 pb-[72px] md:pt-32 md:pb-[226px] md:px-16" id="mission">
+    <div class="pt-12 pb-[72px] md:pt-32 md:pb-[226px] px-6 sm:px-8 lg:px-16" id="mission">
       <span class="block text-primary-A300 text-base font-medium md:text-xl mb-3 uppercase">{{
         t('homePage.screen2.title')
       }}</span>
@@ -30,8 +30,8 @@
       </p>
     </div>
     <!-- THIRD BLOCK -->
-    <div id="our-solutions" class="grid grid-cols-1 lg:grid-cols-3 md:border border-gray-950">
-      <div class="bg-primary-A300 px-6 md:px-16 pb-[72px] md:pb-[142px]">
+    <div id="our-solutions" class="grid grid-cols-1 lg:grid-cols-3 lg:border border-gray-950">
+      <div class="bg-primary-A300 px-6 sm:px-8 lg:px-16 pb-[72px] md:pb-[142px]">
         <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-start flex-col justify-end">
           <p class="text-white text-base md:text-xl uppercase pb-4">
             {{ t('homePage.screen3.block1.title') }}
@@ -43,7 +43,7 @@
         </p>
       </div>
       <div
-        class="px-6 pb-[72px] md:px-16 bg-white flex items-start relative border-y border-x-0 md:border-y-0 md:border-x border-gray-950"
+        class="px-6 sm:px-8 lg:px-16 pb-[72px] bg-white flex items-start relative border-y border-x-0 lg:border-y-0 lg:border-x border-gray-950"
       >
         <div>
           <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-end">
@@ -69,7 +69,7 @@
           </button>
         </div>
       </div>
-      <div class="px-6 pb-[72px] md:px-16 bg-white flex items-start relative">
+      <div class="px-6 sm:px-8 lg:px-16 pb-[72px] bg-white flex items-start relative">
         <div>
           <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-end">
             <p class="headline">
@@ -98,7 +98,7 @@
     <!-- FOUR BLOCK -->
     <div
       :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
-      class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
+      class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center px-6 sm:px-8 lg:px-16 py-6 sm:py-8 lg:py-16"
     >
       <div class="max-w-[930px]">
         <p class="text-white headline">
@@ -119,7 +119,7 @@
     <!-- SIX BLOCK -->
     <div
       :style="{ 'background-image': 'url(' + BgImg3 + ')' }"
-      class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center p-6 md:p-16"
+      class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center px-6 sm:px-8 lg:px-16 py-6 sm:py-8 lg:py-16"
     >
       <div class="box">
         <div class="text-white max-w-[838px]">
@@ -136,12 +136,15 @@
     <!-- SEVEN BLOCK -->
     <SliderPossibility></SliderPossibility>
     <!-- EIGHT  BLOCK -->
-    <h3 class="headline px-6 md:px-16 py-12" id="slider-team">
+    <h3 class="headline px-6 sm:px-8 lg:px-16 py-12" id="slider-team">
       {{ t('homePage.screen8.title') }}
     </h3>
     <SliderTeam></SliderTeam>
     <!-- NINE  BLOCK -->
-    <div class="client-block grid md:grid-cols-2" id="viewport-contact-form">
+    <div
+      class="px-6 sm:px-8 lg:px-16 py-16 md:py-24 grid md:grid-cols-2"
+      id="viewport-contact-form"
+    >
       <div class="flex flex-col" id="contact-form">
         <h2 class="headline">{{ t('homePage.screen9.title') }}</h2>
         <p class="text-xl mt-5">{{ t('homePage.screen9.subtitle') }}</p>
