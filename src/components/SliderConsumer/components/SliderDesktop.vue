@@ -108,7 +108,7 @@ const onChangeSlide = (e: any) => {
 </script>
 <style>
 #slider-consumer-desktop-main .swiper-wrapper {
-  height: 671px;
+  height: 700px;
   margin: 0 auto;
 }
 

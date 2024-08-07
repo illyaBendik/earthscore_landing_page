@@ -67,7 +67,7 @@
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
       v-slot="{ isActive }"
-      ><div class="h-[715px]">
+      ><div class="min-h-[770px]">
         <div
           :style="{ 'background-image': 'url(' + contentItem.imgMobi + ')' }"
           class="h-[322px] mt-8 sm:hidden bg-contain bg-center bg-no-repeat"

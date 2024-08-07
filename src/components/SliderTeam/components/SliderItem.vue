@@ -1,17 +1,6 @@
 <template>
-  <div class="grid grid-cols-8 justify-items-center items-center w-full relative">
-    <div>
-      <button
-        class="prev2 absolute left-[10px] md:left-[64px] top-1/2 -translate-y-1/2"
-        @click="$emit('click-prev')"
-        :disabled="isFirst"
-      >
-        <LeftIcon
-          :class="{ 'text-primary-A300': !isFirst, 'text-black-N90 cursor-not-allowed': isFirst }"
-          class="text-[28px] md:text-5xl mr-6"
-        ></LeftIcon>
-      </button>
-    </div>
+  <div class="grid grid-cols-8 justify-items-center items-center w-full">
+    <div></div>
     <div class="col-span-6 grid grid-col-3 xl:grid-cols-5 gap-8 items-center justify-items-center">
       <div
         class="h-[271px] w-[271px] sm:h-[344px] sm:w-[344px] col-span-3 xl:col-span-2 bg-center bg-cover rounded-md"
@@ -28,18 +17,7 @@
         </p>
       </div>
     </div>
-    <div>
-      <button
-        class="next2 absolute right-[10px] top-1/2 -translate-y-1/2 md:right-[64px]"
-        @click="$emit('click-next')"
-        :disabled="isLast"
-      >
-        <RightIcon
-          class="text-[28px] md:text-5xl ml-6"
-          :class="{ 'text-primary-A300': !isLast, 'text-black-N90 cursor-not-allowed': isLast }"
-        ></RightIcon>
-      </button>
-    </div>
+    <div></div>
   </div>
   <div class="px-6 mt-5 sm:hidden">
     <h5 class="text-[28px]">{{ name }}</h5>
@@ -51,17 +29,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import LeftIcon from '@/components/icons/LeftIcon.vue'
-import RightIcon from '@/components/icons/RightIcon.vue'
-
 defineProps<{
   name: string
   position: string
   deskPosition: string
   text: string
   img: string
-  isFirst: boolean
-  isLast: boolean
   isActive: boolean
 }>()
 

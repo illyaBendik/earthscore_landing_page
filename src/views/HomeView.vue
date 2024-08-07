@@ -142,7 +142,7 @@
     <SliderTeam></SliderTeam>
     <!-- NINE  BLOCK -->
     <div
-      class="px-6 sm:px-8 lg:px-16 py-16 md:py-24 grid md:grid-cols-2"
+      class="px-6 sm:px-8 lg:px-16 py-16 md:py-24 grid md:grid-cols-2 gap-4"
       id="viewport-contact-form"
     >
       <div class="flex flex-col" id="contact-form">

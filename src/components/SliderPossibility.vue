@@ -28,7 +28,7 @@
               <div
                 v-if="swiperInstance"
                 :key="swiperInstance.activeIndex"
-                class="fixed right-[10px] mt-5 space-x-5"
+                class="fixed right-[24px] sm:right-[36px] lg:right-[10px] mt-5 space-x-5"
               >
                 <span v-for="(_, btnIndex) in list" :key="btnIndex">
                   <button

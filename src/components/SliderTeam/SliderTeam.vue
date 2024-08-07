@@ -1,22 +1,40 @@
 <template>
-  <div>
+  <div class="relative">
     <swiper
-      :key="Number(isMobileScreen)"
-      :allowTouchMove="isMobileScreen"
+      :key="Number(isTabletScreen)"
+      :allowTouchMove="isTabletScreen"
       :slides-per-view="1"
       @init="onSwiperMain"
       @slideChange="onSlideChange"
     >
+      <button
+        class="prev2 absolute left-[10px] md:left-[64px] top-[20%] -translate-y-[20%] sm:top-1/2 sm:-translate-y-1/2"
+        @click="prev()"
+        :disabled="isFirst"
+      >
+        <LeftIcon
+          :class="{ 'text-primary-A300': !isFirst, 'text-black-N90 cursor-not-allowed': isFirst }"
+          class="text-[28px] md:text-5xl mr-6"
+        ></LeftIcon>
+      </button>
       <swiper-slide v-for="(user, i) in users" :key="i" v-slot="{ isActive }">
         <SliderItem
           :isActive="isActive"
-          :isFirst="swiperInstanceMain ? swiperInstanceMain.activeIndex === 0 : false"
-          :isLast="swiperInstanceMain ? swiperInstanceMain.activeIndex === users.length - 1 : false"
           v-bind="user"
           @click-next="next()"
           @click-prev="prev()"
         ></SliderItem>
       </swiper-slide>
+      <button
+        class="next2 absolute z-50 right-[10px] top-[20%] -translate-y-[20%] sm:top-1/2 sm:-translate-y-1/2 md:right-[64px]"
+        @click="next()"
+        :disabled="isLast"
+      >
+        <RightIcon
+          class="text-[28px] md:text-5xl ml-6"
+          :class="{ 'text-primary-A300': !isLast, 'text-black-N90 cursor-not-allowed': isLast }"
+        ></RightIcon>
+      </button>
     </swiper>
     <div class="bg-[#E6F2FF80] w-full py-5 lg:py-10 mt-10">
       <swiper
@@ -46,6 +64,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import LeftIcon from '@/components/icons/LeftIcon.vue'
+import RightIcon from '@/components/icons/RightIcon.vue'
 
 import SliderItem from './components/SliderItem.vue'
 import ImgUser1 from '@/assets/img/user-1.png'
@@ -150,7 +170,14 @@ const prev = () => {
 
 const isLgAndMore = computed(() => screenWidth.value > 1024)
 const isMd = computed(() => screenWidth.value > 640 && screenWidth.value < 1024)
-const isMobileScreen = computed(() => screenWidth.value < 640)
+const isTabletScreen = computed(() => screenWidth.value < 1024)
+
+const isFirst = computed(() =>
+  swiperInstanceMain.value ? swiperInstanceMain.value.activeIndex === 0 : false
+)
+const isLast = computed(() =>
+  swiperInstanceMain.value ? swiperInstanceMain.value.activeIndex === users.value.length - 1 : false
+)
 
 const slidesPerView = computed(() => {
   if (isMd.value) {
