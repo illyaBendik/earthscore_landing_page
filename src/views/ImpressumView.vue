@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-[81vh] flex items-start mt-20 box mx-auto sm:px-6 md:px-16">
-    <div class="grid md:grid-cols-2 w-full pt-10">
+    <div class="grid md:grid-cols-2 w-full pt-2 sm:pt-10">
       <div class="order-last md:order-first pt-4 pb-20 md:pb-0 md:pt-0 px-6 sm:px-0">
         <h1 class="text-[32px] mb-8">Impressum</h1>
         <div class="text-base mb-6">
@@ -26,7 +26,7 @@
       </div>
       <div
         :style="{ 'background-image': 'url(' + Img + ')' }"
-        class="h-[445px] bg-cover bg-center rounded-[4px]"
+        class="h-[445px] bg-cover bg-center sm:rounded-[4px]"
       ></div>
     </div>
   </div>
