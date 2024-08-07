@@ -1,8 +1,8 @@
 <template>
-  <div class="h-screen flex items-start mt-20 box mx-auto sm:px-6 md:px-16">
+  <div class="min-h-[92vh] flex items-start mt-20 box mx-auto sm:px-6 md:px-16">
     <div class="grid md:grid-cols-2 w-full pt-2 sm:pt-10">
       <div class="order-last md:order-first pt-4 pb-20 md:pb-0 md:pt-0 px-6 sm:px-0">
-        <h1 class="text-[32px] mb-8">Impressum</h1>
+        <h1 class="text-[32px] mb-8 leading-[35px]">Impressum</h1>
         <div class="text-base mb-6">
           <p>WhatsGreen Research & Science GmbH</p>
           <p>Rommerskirchener Str. 21</p>

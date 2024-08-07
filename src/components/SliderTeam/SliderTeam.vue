@@ -149,7 +149,7 @@ const prev = () => {
 }
 
 const isLgAndMore = computed(() => screenWidth.value > 1024)
-const isMd = computed(() => screenWidth.value > 768 && screenWidth.value < 1024)
+const isMd = computed(() => screenWidth.value > 640 && screenWidth.value < 1024)
 const isMobileScreen = computed(() => screenWidth.value < 640)
 
 const slidesPerView = computed(() => {

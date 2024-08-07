@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-4 z-20 py-12 md:py-16">
+  <div class="grid grid-cols-1 slider-possibility-lg:grid-cols-4 z-20 py-12 md:py-16">
     <h2 class="headline mb-8 px-6 sm:px-8 lg:px-16">
       {{ t('homePage.screen7.title') }}
     </h2>
@@ -8,8 +8,8 @@
         id="slider-possibility"
         @init="init"
         :spaceBetween="30"
-        :key="Number(isMobileScreen)"
-        :allowTouchMove="isMobileScreen"
+        :key="Number(isSmallScreen)"
+        :allowTouchMove="isSmallScreen"
         :speed="500"
         :slidesPerView="isSmallScreen ? 1 : 1.1"
       >
@@ -33,7 +33,7 @@
                 <span v-for="(_, btnIndex) in list" :key="btnIndex">
                   <button
                     @click="onClikcBtn(btnIndex)"
-                    v-if="isMobileScreen ? btnIndex !== list.length : btnIndex !== list.length - 1"
+                    v-if="isSmallScreen ? btnIndex !== list.length : btnIndex !== list.length - 1"
                     class="text-xl"
                     :class="{
                       'text-primary-A300 font-medium': swiperInstance.activeIndex === btnIndex,
@@ -47,11 +47,11 @@
               </div>
               <p
                 :class="{ invisible: !isActive }"
-                class="text-[18px] md:text-[32px] leading-[21px] font-medium md:font-light lg:my-4 mb-3 mt-16 lg:mt-12 px-6 sm:px-8 lg:px-0"
+                class="text-[18px] md:text-[32px] leading-[21px] font-medium md:font-light lg:my-4 mb-3 mt-16 lg:mt-12 slider-possibility-content"
               >
                 {{ item.title }}
               </p>
-              <p :class="{ invisible: !isActive }" class="text-base px-6 sm:px-8 lg:px-0">
+              <p :class="{ invisible: !isActive }" class="text-base slider-possibility-content">
                 {{ item.text }}
               </p>
             </div>
@@ -107,7 +107,7 @@ const list = computed(() => {
     }
   ]
 
-  if (!isMobileScreen.value) {
+  if (!isSmallScreen.value) {
     items.push({
       title: t('homePage.screen7.item4.title'),
       text: t('homePage.screen7.item4.text'),
@@ -123,8 +123,7 @@ const swiperInstance = ref()
 const activeIndex = ref(0)
 const { screenWidth } = useWidth()
 
-const isSmallScreen = computed(() => screenWidth.value < 1024)
-const isMobileScreen = computed(() => screenWidth.value < 640)
+const isSmallScreen = computed(() => screenWidth.value < 1075)
 
 const init = (e: any) => {
   swiperInstance.value = e
@@ -135,3 +134,38 @@ const onClikcBtn = (index: number) => {
   swiperInstance.value.slideTo(index)
 }
 </script>
+<style>
+@media (min-width: 1075px) {
+  .slider-possibility-lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .slider-possibility-content {
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem; /* 24px */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .slider-possibility-content {
+    padding-left: 2rem; /* 32px */
+    padding-right: 2rem; /* 32px */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1074px) {
+  .slider-possibility-content {
+    padding-left: 4rem; /* 64px */
+    padding-right: 4rem; /* 64px */
+  }
+}
+
+@media (min-width: 1075px) {
+  .slider-possibility-content {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+</style>

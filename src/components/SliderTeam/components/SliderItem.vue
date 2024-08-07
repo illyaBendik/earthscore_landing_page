@@ -23,7 +23,7 @@
           <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
           <p class="text-base font-medium">{{ deskPosition }}</p>
         </div>
-        <p v-if="isActive" class="mt-8">
+        <p v-if="isActive" class="mt-8 min-h-[200px]">
           {{ text }}
         </p>
       </div>
