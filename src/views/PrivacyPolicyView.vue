@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center mt-20">
-    <div class="box mx-auto sm:px-6 pt-4 pb-20 md:pb-0 md:pt-0 md:px-16 text-base text-black-N900">
-      <div class="grid md:grid-cols-2 gap-5 pt-10 items-center">
+    <div class="box mx-auto sm:px-6 pb-20 md:pb-0 md:pt-0 md:px-16 text-base text-black-N900">
+      <div class="grid md:grid-cols-2 gap-5 sm:pt-10 items-center">
         <div class="order-last md:order-first px-6 sm:px-0">
           <h1 class="text-[32px] mb-8">Privacy Policy</h1>
           <p class="text-xl pb-4">Allgemeine Informationen zur Datenverarbeitung</p>
@@ -25,7 +25,7 @@
         </div>
         <div
           :style="{ 'background-image': 'url(' + Img + ')' }"
-          class="h-[445px] bg-cover bg-center rounded-[4px]"
+          class="h-[445px] bg-cover bg-center sm:rounded-[4px]"
         ></div>
       </div>
 
