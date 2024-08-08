@@ -19,7 +19,7 @@
     </div>
     <div></div>
   </div>
-  <div class="px-6 mt-5 sm:hidden">
+  <div class="px-6 mt-5 sm:hidden min-h-[480px]">
     <h5 class="text-[28px]">{{ name }}</h5>
     <p class="text-base text-primary-A300 uppercase">{{ position }}</p>
     <p class="text-base font-medium">{{ deskPosition }}</p>

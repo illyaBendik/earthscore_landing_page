@@ -67,7 +67,7 @@
       v-for="(contentItem, contentItemIndex) in contentList"
       :key="contentItemIndex"
       v-slot="{ isActive }"
-      ><div class="min-h-[770px]">
+      ><div>
         <div
           :style="{ 'background-image': 'url(' + contentItem.imgMobi + ')' }"
           class="h-[322px] mt-8 sm:hidden bg-contain bg-center bg-no-repeat"
@@ -76,7 +76,7 @@
           :style="{ 'background-image': 'url(' + contentItem.img + ')' }"
           class="hidden sm:block mt-8 h-[453px] bg-cover bg-center bg-no-repeat"
         ></div>
-        <p v-if="isActive" class="mb-5 mt-8 px-6 sm:px-8 lg:px-16 text-base">
+        <p v-if="isActive" class="mb-5 mt-8 px-6 sm:px-8 lg:px-16 text-base min-h-[600px]">
           {{ contentItem.text }}
         </p>
       </div></swiper-slide

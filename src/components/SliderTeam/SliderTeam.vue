@@ -8,8 +8,9 @@
       @slideChange="onSlideChange"
     >
       <button
-        class="prev2 absolute left-[10px] md:left-[64px] top-[20%] -translate-y-[20%] sm:top-1/2 sm:-translate-y-1/2"
+        class="prev2 absolute z-50 left-[10px] md:left-[64px] top-[20%] -translate-y-[20%] sm:top-1/2 sm:-translate-y-1/2"
         @click="prev()"
+        type="button"
         :disabled="isFirst"
       >
         <LeftIcon
@@ -18,16 +19,12 @@
         ></LeftIcon>
       </button>
       <swiper-slide v-for="(user, i) in users" :key="i" v-slot="{ isActive }">
-        <SliderItem
-          :isActive="isActive"
-          v-bind="user"
-          @click-next="next()"
-          @click-prev="prev()"
-        ></SliderItem>
+        <SliderItem :isActive="isActive" v-bind="user"></SliderItem>
       </swiper-slide>
       <button
         class="next2 absolute z-50 right-[10px] top-[20%] -translate-y-[20%] sm:top-1/2 sm:-translate-y-1/2 md:right-[64px]"
         @click="next()"
+        type="button"
         :disabled="isLast"
       >
         <RightIcon
@@ -160,6 +157,8 @@ const next = () => {
 }
 
 const prev = () => {
+  console.log('AAAAAAAAAaa')
+
   if (swiperInstanceMain.value.activeIndex !== 0) {
     const index = swiperInstanceMain.value.activeIndex - 1
     swiperInstanceMain.value.slideTo(index)

@@ -3,7 +3,7 @@
     <div class="box mx-auto sm:px-6 pb-20 md:pb-0 md:pt-0 md:px-16 text-base text-black-N900">
       <div class="grid md:grid-cols-2 gap-5 sm:pt-10 items-start">
         <div class="order-last md:order-first px-6 sm:px-0">
-          <h1 class="text-[32px]">Privacy Policy</h1>
+          <h1 class="text-[32px] leading-[35px]">Privacy Policy</h1>
           <p class="text-xl pb-4 pt-8">Allgemeine Informationen zur Datenverarbeitung</p>
           <p class="font-medium">Verantwortliche Stelle:</p>
           <p>WhatsGreen Research & Science GmbH</p>
