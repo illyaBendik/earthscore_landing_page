@@ -3,9 +3,8 @@
     class="bg-black-N700 text-white py-5 px-6 sm:px-8 lg:px-16 md:flex items-center justify-between"
   >
     <div class="flex justify-center flex-col md:flex-row items-center flex-wrap">
-      <RouterLink :to="{ name: 'home' }" class="flex items-center text-lg">
-        <img class="w-10 h-10" :src="ImgLogo" alt="Logo" />
-        <span class="pl-2 font-medium">EarhtScore</span>
+      <RouterLink :to="{ name: 'home' }">
+        <img class="h-[38px] w-[138px] pb-[5px]" :src="ImgLogo" alt="Logo" />
       </RouterLink>
       <div class="mt-[32px] mb-[48px] md:mt-0 md:mb-0 md:ml-5 md:mr-10">
         <span class="text-base">Copyright © 2024 WhatsGreen GmbH</span>
@@ -44,7 +43,7 @@
 <script setup lang="ts">
 import FooterImg1 from '@/assets/img/footer-1.png'
 import FooterImg2 from '@/assets/img/footer-2.png'
-import ImgLogo from '@/assets/img/logo.svg'
+import ImgLogo from '@/assets/img/img-logo-footer.svg'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
