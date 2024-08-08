@@ -76,7 +76,10 @@
           :style="{ 'background-image': 'url(' + contentItem.img + ')' }"
           class="hidden sm:block mt-8 h-[453px] bg-cover bg-center bg-no-repeat"
         ></div>
-        <p v-if="isActive" class="mb-5 mt-8 px-6 sm:px-8 lg:px-16 text-base min-h-[600px]">
+        <p
+          v-if="isActive"
+          class="mb-5 mt-8 px-6 sm:px-8 lg:px-16 text-base min-h-[600px] sm:min-h-[300px]"
+        >
           {{ contentItem.text }}
         </p>
       </div></swiper-slide

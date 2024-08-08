@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-black-N700 text-white p-5 md:flex items-center justify-between">
+  <div
+    class="bg-black-N700 text-white py-5 px-6 sm:px-8 lg:px-16 md:flex items-center justify-between"
+  >
     <div class="flex justify-center flex-col md:flex-row items-center flex-wrap">
       <RouterLink :to="{ name: 'home' }" class="flex items-center text-lg">
         <img class="w-10 h-10" :src="ImgLogo" alt="Logo" />
